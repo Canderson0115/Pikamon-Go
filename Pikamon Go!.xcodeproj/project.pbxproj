@@ -1,0 +1,311 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D72EB6521EB13112001D262E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EB6511EB13112001D262E /* AppDelegate.swift */; };
+		D72EB6541EB13112001D262E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EB6531EB13112001D262E /* ViewController.swift */; };
+		D72EB6571EB13112001D262E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D72EB6551EB13112001D262E /* Main.storyboard */; };
+		D72EB6591EB13112001D262E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D72EB6581EB13112001D262E /* Assets.xcassets */; };
+		D72EB65C1EB13112001D262E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D72EB65A1EB13112001D262E /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D72EB64E1EB13112001D262E /* Pikamon Go!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pikamon Go!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D72EB6511EB13112001D262E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D72EB6531EB13112001D262E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D72EB6561EB13112001D262E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D72EB6581EB13112001D262E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D72EB65B1EB13112001D262E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D72EB65D1EB13112001D262E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D72EB64B1EB13112001D262E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D72EB6451EB13112001D262E = {
+			isa = PBXGroup;
+			children = (
+				D72EB6501EB13112001D262E /* Pikamon Go! */,
+				D72EB64F1EB13112001D262E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D72EB64F1EB13112001D262E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D72EB64E1EB13112001D262E /* Pikamon Go!.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D72EB6501EB13112001D262E /* Pikamon Go! */ = {
+			isa = PBXGroup;
+			children = (
+				D72EB6511EB13112001D262E /* AppDelegate.swift */,
+				D72EB6531EB13112001D262E /* ViewController.swift */,
+				D72EB6551EB13112001D262E /* Main.storyboard */,
+				D72EB6581EB13112001D262E /* Assets.xcassets */,
+				D72EB65A1EB13112001D262E /* LaunchScreen.storyboard */,
+				D72EB65D1EB13112001D262E /* Info.plist */,
+			);
+			path = "Pikamon Go!";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D72EB64D1EB13112001D262E /* Pikamon Go! */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D72EB6601EB13112001D262E /* Build configuration list for PBXNativeTarget "Pikamon Go!" */;
+			buildPhases = (
+				D72EB64A1EB13112001D262E /* Sources */,
+				D72EB64B1EB13112001D262E /* Frameworks */,
+				D72EB64C1EB13112001D262E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pikamon Go!";
+			productName = "Pikamon Go!";
+			productReference = D72EB64E1EB13112001D262E /* Pikamon Go!.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D72EB6461EB13112001D262E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "John Hersey High School";
+				TargetAttributes = {
+					D72EB64D1EB13112001D262E = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = JML6FZTNJ8;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D72EB6491EB13112001D262E /* Build configuration list for PBXProject "Pikamon Go!" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D72EB6451EB13112001D262E;
+			productRefGroup = D72EB64F1EB13112001D262E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D72EB64D1EB13112001D262E /* Pikamon Go! */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D72EB64C1EB13112001D262E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D72EB65C1EB13112001D262E /* LaunchScreen.storyboard in Resources */,
+				D72EB6591EB13112001D262E /* Assets.xcassets in Resources */,
+				D72EB6571EB13112001D262E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D72EB64A1EB13112001D262E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D72EB6541EB13112001D262E /* ViewController.swift in Sources */,
+				D72EB6521EB13112001D262E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D72EB6551EB13112001D262E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D72EB6561EB13112001D262E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D72EB65A1EB13112001D262E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D72EB65B1EB13112001D262E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D72EB65E1EB13112001D262E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D72EB65F1EB13112001D262E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D72EB6611EB13112001D262E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JML6FZTNJ8;
+				INFOPLIST_FILE = "Pikamon Go!/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.jhhs620011.Pikamon-Go-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D72EB6621EB13112001D262E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JML6FZTNJ8;
+				INFOPLIST_FILE = "Pikamon Go!/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.jhhs620011.Pikamon-Go-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D72EB6491EB13112001D262E /* Build configuration list for PBXProject "Pikamon Go!" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D72EB65E1EB13112001D262E /* Debug */,
+				D72EB65F1EB13112001D262E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D72EB6601EB13112001D262E /* Build configuration list for PBXNativeTarget "Pikamon Go!" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D72EB6611EB13112001D262E /* Debug */,
+				D72EB6621EB13112001D262E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D72EB6461EB13112001D262E /* Project object */;
+}
