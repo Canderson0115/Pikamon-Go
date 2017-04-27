@@ -10,17 +10,29 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var textLabel: UITextView!
+    
+    @IBOutlet weak var tapToContinueLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let timer = Timer(timeInterval: 2.0, target: self, selector: #selector(tapContinueAppear), userInfo: Any?.self, repeats: true)
+        
+        textLabel.text = "Welcome to the world of Pikamon Go!"
+        
+        tapToContinueLabel.text = ""
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func tapContinueAppear()
+    {
         
+        tapToContinueLabel.text = "Tap to continue"
         
     }
+    
 
 
 }
