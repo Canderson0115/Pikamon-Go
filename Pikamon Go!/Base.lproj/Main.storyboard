@@ -68,6 +68,35 @@
             </objects>
             <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
         </scene>
+        <!--Map View Controller-->
+        <scene sceneID="141-6x-VCp">
+            <objects>
+                <viewController id="Ox2-SL-rdl" customClass="MapViewController" customModule="Pikamon_Go_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FOj-GM-iH7"/>
+                        <viewControllerLayoutGuide type="bottom" id="l04-8c-93N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1d6-Et-gmD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ND5-Rz-OiM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ND5-Rz-OiM" secondAttribute="trailing" id="Phg-Rk-9Be"/>
+                            <constraint firstItem="ND5-Rz-OiM" firstAttribute="leading" secondItem="1d6-Et-gmD" secondAttribute="leading" id="Qe2-S8-8Tm"/>
+                            <constraint firstItem="ND5-Rz-OiM" firstAttribute="top" secondItem="1d6-Et-gmD" secondAttribute="top" id="mlN-lD-Xba"/>
+                            <constraint firstItem="l04-8c-93N" firstAttribute="top" secondItem="ND5-Rz-OiM" secondAttribute="bottom" id="w4x-NU-31t"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ot-JK-nOh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="621.60000000000002" y="138.98050974512745"/>
+        </scene>
         <!--Battle View Controller-->
         <scene sceneID="unM-vf-eq6">
             <objects>
