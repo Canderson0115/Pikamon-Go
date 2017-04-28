@@ -101,6 +101,24 @@
             </objects>
             <point key="canvasLocation" x="621.60000000000002" y="138.98050974512745"/>
         </scene>
+        <!--Pikapedia-->
+        <scene sceneID="4LL-g9-atP">
+            <objects>
+                <viewController id="wOT-8a-cnZ" customClass="Pikapedia" customModule="Pikamon_Go_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YtS-LW-t0D"/>
+                        <viewControllerLayoutGuide type="bottom" id="xLc-nI-YIR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yhr-OD-fX5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="64L-BR-ktI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="622" y="-582"/>
+        </scene>
         <!--Battle View Controller-->
         <scene sceneID="unM-vf-eq6">
             <objects>
