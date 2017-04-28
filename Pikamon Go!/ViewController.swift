@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     
     @IBOutlet weak var textLabel: UITextView!
     
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         tapToContinueLabel.text = ""
         
     }
-
+    
     func tapContinueAppear()
     {
         
@@ -41,10 +41,15 @@ class ViewController: UIViewController {
         
     }
     
-
     
-   
-
-
+    @IBAction func tapToContinue(_ sender: UITapGestureRecognizer) {
+        
+        
+        
+    }
+    
+    
+    
+    
 }
 
