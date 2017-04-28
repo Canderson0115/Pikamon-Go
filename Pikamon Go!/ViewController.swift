@@ -18,6 +18,9 @@ class ViewController: UIViewController {
     
     var timer = Timer()
     
+    var numberOfTaps = 0
+    
+    var help = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +28,8 @@ class ViewController: UIViewController {
         timer = Timer(timeInterval: 2.0, target: self, selector: #selector(tapContinueAppear), userInfo: Any?.self, repeats: true)
         
         timer.fire()
+        
+        print(timer)
         
         textLabel.text = "Welcome to the world of Pikamon Go!"
         
@@ -35,16 +40,27 @@ class ViewController: UIViewController {
     func tapContinueAppear()
     {
         
-        timer.invalidate()
+        help += 1
+        
+        print(help)
         
         tapToContinueLabel.text = "Tap to continue"
+        
+        timer.invalidate()
         
     }
     
     
     @IBAction func tapToContinue(_ sender: UITapGestureRecognizer) {
         
+        timer.fire()
         
+        numberOfTaps += 1
+        
+        if numberOfTaps == 1
+        {
+            textLabel.text = "I am the Pikamon Professor, Professor Mango."
+        }
         
     }
     
