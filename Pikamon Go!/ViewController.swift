@@ -15,10 +15,16 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tapToContinueLabel: UILabel!
     
+    
+    var timer = Timer()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let timer = Timer(timeInterval: 2.0, target: self, selector: #selector(tapContinueAppear), userInfo: Any?.self, repeats: true)
+        timer = Timer(timeInterval: 2.0, target: self, selector: #selector(tapContinueAppear), userInfo: Any?.self, repeats: true)
+        
+        timer.fire()
         
         textLabel.text = "Welcome to the world of Pikamon Go!"
         
@@ -28,6 +34,8 @@ class ViewController: UIViewController {
 
     func tapContinueAppear()
     {
+        
+        timer.invalidate()
         
         tapToContinueLabel.text = "Tap to continue"
         
