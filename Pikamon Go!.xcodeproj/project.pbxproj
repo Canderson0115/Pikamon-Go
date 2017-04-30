@@ -65,11 +65,11 @@
 				D72EB6511EB13112001D262E /* AppDelegate.swift */,
 				D72EB6531EB13112001D262E /* ViewController.swift */,
 				EFC069871EB3CC03009D3C16 /* PikamenClass.swift */,
-				D72EB6551EB13112001D262E /* Main.storyboard */,
 				EFC069891EB3CDF0009D3C16 /* MapViewController.swift */,
 				750C50CF1EB5C9700057C90E /* AnnotationClass.swift */,
 				D741E8631EB27E1300E032DD /* BattleViewController.swift */,
 				D72EB6581EB13112001D262E /* Assets.xcassets */,
+				D72EB6551EB13112001D262E /* Main.storyboard */,
 				D72EB65A1EB13112001D262E /* LaunchScreen.storyboard */,
 				D72EB65D1EB13112001D262E /* Info.plist */,
 			);

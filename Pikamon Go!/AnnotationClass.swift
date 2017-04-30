@@ -9,6 +9,8 @@
 import Foundation
 import MapKit
 
+//Custom annotation class with tag attribute
+
 class Annotation: NSObject, MKAnnotation {
     
     let title: String?

@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 import MapKit
 
+//Get a key for value in Dictionary
+
 extension Dictionary where Value: Equatable {
     func someKey(forValue val: Value) -> Key? {
         return first(where: { $1 == val })?.0
@@ -26,7 +28,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     var annotationLocations = [Int:CLLocationCoordinate2D]()
     var annotationDistances = [Int: [Int: Double]]()
     
-    //42.108516, -88.001374 : 42.073481, -87.937314
+    //Game boundary coordinates: 42.108516, -88.001374 : 42.073481, -87.937314
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,10 +40,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         sortAnnotations()
         createPolyline()
         zoomIn()
+ 
     }
     
     
-
+    //Create random locations within boundary
     
     func createLocation() -> CLLocationCoordinate2D
     {
@@ -50,10 +53,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         var y = CGFloat(87937314)
         let rand_x = CGFloat(arc4random_uniform(35035))
         let rand_y = CGFloat(arc4random_uniform(64060))
-        x = x + rand_x
-        y = y + rand_y
-        x = x / 1000000
-        y = -y / 1000000
+        x = x + rand_x; x = x / 1000000
+        y = y + rand_y; y = -y / 1000000
         let xCoordinate = CLLocationDegrees(x)
         let yCoordinate = CLLocationDegrees(y)
         
@@ -61,6 +62,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         return location
     }
+    
+    //Initial Zoom
     
     func zoomIn()
     {
@@ -70,6 +73,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         mapViewBoard.setRegion(region, animated: false)
 
     }
+    
+    //Add overlay on map in order to create game boundaries
+    
     func createPolyline() {
         let point1 = CLLocationCoordinate2DMake(42.108516, -88.001374);
         let point2 = CLLocationCoordinate2DMake(42.108516, -87.937314);
@@ -81,8 +87,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         let geodesic = MKGeodesicPolyline(coordinates: points, count: 5)
         mapViewBoard.add(geodesic)
-        
-            }
+    
+    }
+    
+    //Color in the boundary overlay
+    
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
        
             let polylineRenderer = MKPolylineRenderer(overlay: overlay)
@@ -90,7 +99,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             polylineRenderer.lineWidth = 2
             return polylineRenderer
     }
-
+    
+    //Add annotations to Map View
+    
     func addAnnotations()
     {
         
@@ -103,13 +114,17 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
     }
     
+    //Create a sorted dictionary of the distance from User (in meters)
+    
     func sortAnnotations()
     {
         
-        //let userLocation = CLLocation.init(latitude: mapViewBoard.userLocation.coordinate.latitude, longitude: mapViewBoard.userLocation.coordinate.longitude)
+        let userLocation = CLLocation.init(latitude: mapViewBoard.userLocation.coordinate.latitude, longitude: mapViewBoard.userLocation.coordinate.longitude)
         
-        let userLocation = CLLocation.init(latitude: 42.108516, longitude: -88.001374)
-
+        //let userLocation = CLLocation.init(latitude: 42.108516, longitude: -88.001374)
+        
+        //Get raw distance
+        
         var annotationDistanceDictionary = [Int:Double]()
 
         
@@ -117,6 +132,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         {
             annotationDistanceDictionary[tag] = CLLocation.init(latitude: annotationLocation.latitude, longitude: annotationLocation.longitude).distance(from: userLocation)
         }
+        
+        //Sort distance
         
         let sortedDistance = Array(annotationDistanceDictionary.values).sorted(by: <)
         
@@ -131,6 +148,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             }
         }
         var i = 1
+        
+        //Append sorted distance into dictionary
         
         for annotationTag in annotationTagArray
         {

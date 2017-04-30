@@ -9,7 +9,9 @@
 import Foundation
 import MapKit
 
-class Pikamon
+//Parameters for Pikamon
+
+class Parameters
 {
     var name = String()
     var type = String()
@@ -17,5 +19,30 @@ class Pikamon
     var alive = Bool()
     var moveSet = [String]()
     var effects = [String]()
+    var weight = Double()
+    
+    init(name: String, type: String, health: Int, alive: Bool, moveSet: [String], effects: [String], weight: Double)
+    {
+        self.name = name
+        self.type = type
+        self.health = health
+        self.alive = alive
+        self.moveSet = moveSet
+        self.effects = effects
+        self.weight = weight
+        
+    }
     
 }
+
+//Class of all Pikamon
+
+class Pikamon
+{
+    var examplePikamon = Parameters(name: "Example", type: "ExampleType", health: 10, alive: true, moveSet: ["ExampleMove"], effects: ["ExampleEffect"], weight: 0.5)
+
+}
+
+
+
+
