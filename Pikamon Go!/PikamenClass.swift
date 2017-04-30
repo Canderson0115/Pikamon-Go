@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import MapKit
 
-class Pikamen
+class Pikamon
 {
     var name = String()
     var type = String()
