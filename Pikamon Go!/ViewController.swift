@@ -40,9 +40,28 @@ class ViewController: UIViewController {
         }
         else if numberOfTaps == 2
         {
-            textLabel.text = ""
+            textLabel.text = "You are about to enter the world of Poké-- I mean Pikamon."
         }
-        
+        else if numberOfTaps == 3
+        {
+            textLabel.text = "Pikamon are creatures that inhabit this world. Some use them to battle. Others... Well, that's actually about it."
+        }
+        else if numberOfTaps == 4
+        {
+            textLabel.text = "Anyway, what's your name?"
+        }
+        else if numberOfTaps == 5
+        {
+            let alert = UIAlertController(title: "What's your name?", message: "", preferredStyle: .alert)
+            
+//            let alertTextField = UITextField()
+//            
+//            alertTextField.placeholder = "Name"
+            
+            alert.addTextField(configurationHandler: { (alertTextField) in
+                alertTextField.placeholder = "name"
+            })
+        }
         
     }
     
