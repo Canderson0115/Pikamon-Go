@@ -149,7 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFC069881EB3CC03009D3C16 /* PikamenClass.swift in Sources */,
+				EFC069881EB3CC03009D3C16 /* PikamonClass.swift in Sources */,
 				750C50D01EB5C9700057C90E /* AnnotationClass.swift in Sources */,
 				D741E8641EB27E1300E032DD /* BattleViewController.swift in Sources */,
 				D72EB6541EB13112001D262E /* ViewController.swift in Sources */,

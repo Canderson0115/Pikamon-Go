@@ -55,6 +55,8 @@ class Pikamon
     
     var Trithyta = Parameters(name: "Trithyta", type: "Matter-Electro", health: 500, alive: true, moveSet: ["ExampleMove"], effects: ["ExampleEffect"], weight: 0.025)
 
+    var pokéchew = Parameters(name: "Pokéchew", type: "Electro", health: 100, alive: true, moveSet: ["ExampleLightningMove"], effects: [""], weight: 0.01)
+    
 }
 
 
