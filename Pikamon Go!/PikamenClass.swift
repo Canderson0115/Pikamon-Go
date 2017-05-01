@@ -39,7 +39,11 @@ class Parameters
 
 class Pikamon
 {
-    var examplePikamon = Parameters(name: "Example", type: "ExampleType", health: 10, alive: true, moveSet: ["ExampleMove"], effects: ["ExampleEffect"], weight: 0.5)
+    var examplePikamon = Parameters(name: "Example", type: "ExampleType", health: 10, alive: true, moveSet: ["ExampleMove"], effects: ["ExampleEffect"], weight: 0.0)
+    
+    var LizieChu = Parameters(name: "LizieChu", type: "Grass-Electro", health: 250, alive: true, moveSet: ["ExampleMove"], effects: ["ExampleEffect"], weight: 0.5)
+    
+    var Glacierite = Parameters(name: "Glacierite", type: "Ice-Rock", health: 250, alive: true, moveSet: ["ExampleMove"], effects: ["ExampleEffect"], weight: 0.5)
 
 }
 
