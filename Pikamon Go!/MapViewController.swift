@@ -40,6 +40,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         sortAnnotations()
         createPolyline()
         zoomIn()
+        
+        var pikamon = Pikamon()
+        var moves = Moves()
+        var type = Types()
+        
+        moves.exampleMove
+        
+        let pika = Parameters.init(name: "pika", type: [type.exampleType], health: 7, alive: true, moveSet: [moves.exampleMove], effects: ["example"], weight: 0.6)
+        
+        pika.type[0].moveSet[0].exampleMove.name = "hi"
  
     }
     
