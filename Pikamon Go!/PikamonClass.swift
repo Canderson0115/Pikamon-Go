@@ -39,7 +39,21 @@ class Parameters
 
 class Pikamon
 {
-    var examplePikamon = Parameters(name: "Example", type: "ExampleType", health: 10, alive: true, moveSet: ["ExampleMove"], effects: ["ExampleEffect"], weight: 0.5)
+    var examplePikamon = Parameters(name: "Example", type: "ExampleType", health: 10, alive: true, moveSet: ["ExampleMove"], effects: ["ExampleEffect"], weight: 0.0)
+    
+    var LizieChu = Parameters(name: "LizieChu", type: "Grass-Electro", health: 250, alive: true, moveSet: ["ExampleMove"], effects: ["ExampleEffect"], weight: 0.25)
+    
+    var Glacierite = Parameters(name: "Glacierite", type: "Ice-Rock", health: 250, alive: true, moveSet: ["ExampleMove"], effects: ["ExampleEffect"], weight: 0.25)
+    
+    var Bochtite = Parameters(name: "Bochtite", type: "Ice-Rock", health: 250, alive: true, moveSet: ["ExampleMove"], effects: ["ExampleEffect"], weight: 0.075)
+    
+    var ChardGuard = Parameters(name: "Chard Guard", type: "Fire-Rock", health: 250, alive: true, moveSet: ["ExampleMove"], effects: ["ExampleEffect"], weight: 0.1)
+   
+    var ThunderStrike = Parameters(name: "Thunder Strike", type: "Electro-Fire", health: 250, alive: true, moveSet: ["ExampleMove"], effects: ["ExampleEffect"], weight: 0.15)
+    
+    var Buzzfeed = Parameters(name: "Buzzfeed", type: "Electro-Rock", health: 250, alive: true, moveSet: ["ExampleMove"], effects: ["ExampleEffect"], weight: 0.15)
+    
+    var Trithyta = Parameters(name: "Trithyta", type: "Matter-Electro", health: 500, alive: true, moveSet: ["ExampleMove"], effects: ["ExampleEffect"], weight: 0.025)
 
     var pokéchew = Parameters(name: "Pokéchew", type: "Electro", health: 30, alive: true, moveSet: ["ExampleLightningMove"], effects: [""], weight: 0.01)
     
