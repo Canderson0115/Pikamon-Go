@@ -51,3 +51,21 @@ class Pikamon
     
 }
 
+class Player
+{
+  
+    var name = ""
+    
+    var level = 1
+    
+    var pikamonInParty:[Pikamon] = []
+    
+}
+
+
+
+
+
+
+
+
