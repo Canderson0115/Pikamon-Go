@@ -96,6 +96,14 @@
                                     <segue destination="UKp-gF-27R" kind="show" id="bPS-Hl-dhk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYT-Vh-c8d">
+                                <rect key="frame" x="25" y="72" width="67" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pikapedia"/>
+                                <connections>
+                                    <segue destination="wOT-8a-cnZ" kind="show" id="5jR-U6-C73"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
