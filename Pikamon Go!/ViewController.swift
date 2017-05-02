@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var player = Player()
+    
     
     @IBOutlet weak var textLabel: UITextView!
     
@@ -54,13 +56,24 @@ class ViewController: UIViewController {
         {
             let alert = UIAlertController(title: "What's your name?", message: "", preferredStyle: .alert)
             
-//            let alertTextField = UITextField()
-//            
-//            alertTextField.placeholder = "Name"
-            
             alert.addTextField(configurationHandler: { (alertTextField) in
                 alertTextField.placeholder = "name"
             })
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (response) in
+                
+                self.player.name = (alert.textFields?[0].text)!
+                
+            }))
+            
+            alert.addAction(UIAlertAction(title: "I don't have a name", style: .cancel, handler: { (response) in
+                
+                self.textLabel.text = ""
+                
+            }))
+            
+            present(alert, animated: true, completion: nil)
+            
         }
         
     }
