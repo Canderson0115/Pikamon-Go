@@ -50,3 +50,5 @@ class Pikamon
     var pokéchew = Parameters(name: "Pokéchew", type: "Electro", health: 100, alive: true, moveSet: ["ExampleLightningMove"], effects: [""], weight: 0.2)
     
 }
+
+

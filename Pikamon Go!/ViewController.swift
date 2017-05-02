@@ -68,7 +68,7 @@ class ViewController: UIViewController {
             
             alert.addAction(UIAlertAction(title: "I don't have a name", style: .cancel, handler: { (response) in
                 
-                self.textLabel.text = ""
+                self.textLabel.text = "Oh wow. RIP"
                 
             }))
             
