@@ -9,42 +9,77 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var player = Player()
+    
     
     @IBOutlet weak var textLabel: UITextView!
     
     @IBOutlet weak var tapToContinueLabel: UILabel!
     
     
-    var timer = Timer()
+    var numberOfTaps = 0
     
+    var help = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        timer = Timer(timeInterval: 2.0, target: self, selector: #selector(tapContinueAppear), userInfo: Any?.self, repeats: true)
-        
-        timer.fire()
         
         textLabel.text = "Welcome to the world of Pikamon Go!"
         
         tapToContinueLabel.text = ""
         
     }
-
-    func tapContinueAppear()
-    {
+    
+    
+    @IBAction func tapToContinue(_ sender: UITapGestureRecognizer) {
         
-        timer.invalidate()
+        numberOfTaps += 1
         
-        tapToContinueLabel.text = "Tap to continue"
+        if numberOfTaps == 1
+        {
+            textLabel.text = "My name is Professor Acorn, but most people just call me the Pikamon Professor."
+        }
+        else if numberOfTaps == 2
+        {
+            textLabel.text = "You are about to enter the world of Poké-- I mean Pikamon."
+        }
+        else if numberOfTaps == 3
+        {
+            textLabel.text = "Pikamon are creatures that inhabit this world. Some use them to battle. Others... Well, that's actually about it."
+        }
+        else if numberOfTaps == 4
+        {
+            textLabel.text = "Anyway, what's your name?"
+        }
+        else if numberOfTaps == 5
+        {
+            let alert = UIAlertController(title: "What's your name?", message: "", preferredStyle: .alert)
+            
+            alert.addTextField(configurationHandler: { (alertTextField) in
+                alertTextField.placeholder = "name"
+            })
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (response) in
+                
+                self.player.name = (alert.textFields?[0].text)!
+                
+            }))
+            
+            alert.addAction(UIAlertAction(title: "I don't have a name", style: .cancel, handler: { (response) in
+                
+                self.textLabel.text = "Oh wow. RIP"
+                
+            }))
+            
+            present(alert, animated: true, completion: nil)
+            
+        }
         
     }
     
-
     
-   
-
-
+    
+    
 }
 

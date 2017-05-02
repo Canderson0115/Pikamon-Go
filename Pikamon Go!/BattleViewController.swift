@@ -10,8 +10,16 @@ import UIKit
 
 class BattleViewController: UIViewController {
 
+    @IBOutlet weak var enemyNameLabel: UILabel!
+    @IBOutlet weak var enemyImageView: UIImageView!
     
+    @IBOutlet weak var teamNameLabel: UILabel!
+    @IBOutlet weak var teamImageView: UIImageView!
     
+    @IBOutlet weak var skillOneLabel: UILabel!
+    @IBOutlet weak var skillTwoLabel: UILabel!
+    @IBOutlet weak var skillThreeLabel: UILabel!
+    @IBOutlet weak var skillFourLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
