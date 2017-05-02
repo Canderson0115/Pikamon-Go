@@ -23,5 +23,12 @@ var PikamonViewer:[Pikamon] = []
     {
         return PikamonViewer.count
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let myCell = PikamonList.dequeueReusableCell(withIdentifier: "pikamomLister")
+        let pikamen = PikamonViewer[indexPath.row]
+ //       myCell?.textLabel!.text = pikamen.name
+        return myCell!
+    }
 
 }
