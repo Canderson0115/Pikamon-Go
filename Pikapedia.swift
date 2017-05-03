@@ -8,27 +8,48 @@
 
 import UIKit
 
-class Pikapedia: UIViewController {
+class Pikapedia: UIViewController, UITableViewDataSource, UITableViewDelegate
+{
 
 @IBOutlet weak var PikamonList: UITableView!
     
-var PikamonViewer:[Pikamon] = []
+    var pikamonNames = [String]()
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+        
+        PikamonList.dataSource = self
+        
+        //pikamonNames = pikamon.listPropertiesWithValues()
+        
+        func help()
+        {
+            for i in pikamon.pikamonList
+            {
+                print(i.health)
+                pikamonNames.append(i.name)
+            }
+        }
+        
+        help()
         
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return PikamonViewer.count
+        return pikamonNames.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let myCell = PikamonList.dequeueReusableCell(withIdentifier: "pikamomLister")
-        let pikamen = PikamonViewer[indexPath.row]
- //       myCell?.textLabel!.text = pikamen.name
-        return myCell!
-    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell")! as UITableViewCell
+        
+        cell.textLabel?.text = pikamonNames[indexPath.row]
+        
+        return cell
 
+    }
+    
 }
