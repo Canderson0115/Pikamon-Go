@@ -15,6 +15,6 @@ class Player
     
     var level = 1
     
-    var pikamonInInventory: [Pikamon] = []
+    var pikamonInInventory: [Parameters] = []
     
 }

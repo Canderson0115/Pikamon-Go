@@ -40,6 +40,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         sortAnnotations()
         createPolyline()
         zoomIn()
+        
+        
  
     }
     
