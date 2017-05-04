@@ -82,7 +82,7 @@ class MoveClass
     
     let flameTosser = MoveParameters(name: "Flametosser", damage: 60, powerPoints: [5, 5], damageMultiplier: 1.0)
     
-    let lightningBolt = MoveParameters(name: "Lightningbolt", damage: <#T##Int#>, powerPoints: <#T##[Int]#>, damageMultiplier: <#T##Double#>)
+ //   let lightningBolt = MoveParameters(name: "Lightningbolt", damage: <#T##Int#>, powerPoints: <#T##[Int]#>, damageMultiplier: <#T##Double#>)
     
 }
 
