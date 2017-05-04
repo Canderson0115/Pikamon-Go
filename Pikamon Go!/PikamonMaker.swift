@@ -78,9 +78,11 @@ class MoveParameters
 class MoveClass
 {
     
-    let exampleMove = MoveParameters(name: "Example Name", damage: 10, powerPoints: [4,4], damageMultiplier: 1.0)
+    let punch = MoveParameters(name: "punch", damage: 40, powerPoints: [20,20], damageMultiplier: 1.0)
     
-    let exampleFireAttack = MoveParameters(name: "FIRE >:D", damage: 1000, powerPoints: [5, 5], damageMultiplier: 1.0)
+    let flameTosser = MoveParameters(name: "Flametosser", damage: 60, powerPoints: [5, 5], damageMultiplier: 1.0)
+    
+    let lightningBolt = MoveParameters(name: "Lightningbolt", damage: <#T##Int#>, powerPoints: <#T##[Int]#>, damageMultiplier: <#T##Double#>)
     
 }
 
@@ -92,9 +94,11 @@ var moves = MoveClass()
 class TypesClass
 {
     
-    let exampleType = TypeParameters(classId: 0, moveSet: [moves.exampleMove])
+    let exampleType = TypeParameters(classId: 0, moveSet: [moves.punch])
     
-    let exampleFireType = TypeParameters(classId: 1, moveSet: [moves.exampleFireAttack])
+    let fire = TypeParameters(classId: 1, moveSet: [moves.flameTosser])
+    
+    let electro = TypeParameters(classId: 2, moveSet: [moves.punch])
     
 }
 
@@ -105,19 +109,19 @@ var types = TypesClass()
 class PikamonClass
 {
     
-    var example1 = Parameters(name: "LizieChu", type: [types.exampleType]/*"Grass-Electro"*/, health: 250, alive: true, moveSet: [moves.exampleMove]/*["Slash","Leaf Blast","Summon Spark","Flower Bloom"]*/, effects: [""], weight: 0.2)
+    var pokéchu = Parameters(name: "LizieChu", type: [types.exampleType]/*"Grass-Electro"*/, health: 250, alive: true, moveSet: [moves.punch]/*["Slash","Leaf Blast","Summon Spark","Flower Bloom"]*/, effects: [""], weight: 0.2)
     
-    var example2 = Parameters(name: "LizieChu", type: [types.exampleType]/*"Grass-Electro"*/, health: 251, alive: true, moveSet: [moves.exampleMove]/*["Slash","Leaf Blast","Summon Spark","Flower Bloom"]*/, effects: [""], weight: 0.2)
+    var example2 = Parameters(name: "LizieChu", type: [types.exampleType]/*"Grass-Electro"*/, health: 251, alive: true, moveSet: [moves.punch]/*["Slash","Leaf Blast","Summon Spark","Flower Bloom"]*/, effects: [""], weight: 0.2)
     
-    var example3 = Parameters(name: "LizieChu", type: [types.exampleType]/*"Grass-Electro"*/, health: 252, alive: true, moveSet: [moves.exampleMove]/*["Slash","Leaf Blast","Summon Spark","Flower Bloom"]*/, effects: [""], weight: 0.2)
+    var example3 = Parameters(name: "LizieChu", type: [types.exampleType]/*"Grass-Electro"*/, health: 252, alive: true, moveSet: [moves.punch]/*["Slash","Leaf Blast","Summon Spark","Flower Bloom"]*/, effects: [""], weight: 0.2)
     
-    var example4 = Parameters(name: "LizieChu", type: [types.exampleType]/*"Grass-Electro"*/, health: 253, alive: true, moveSet: [moves.exampleMove]/*["Slash","Leaf Blast","Summon Spark","Flower Bloom"]*/, effects: [""], weight: 0.2)
+    var example4 = Parameters(name: "LizieChu", type: [types.exampleType]/*"Grass-Electro"*/, health: 253, alive: true, moveSet: [moves.punch]/*["Slash","Leaf Blast","Summon Spark","Flower Bloom"]*/, effects: [""], weight: 0.2)
     
-    var example5 = Parameters(name: "LizieChu", type: [types.exampleType]/*"Grass-Electro"*/, health: 254, alive: true, moveSet: [moves.exampleMove]/*["Slash","Leaf Blast","Summon Spark","Flower Bloom"]*/, effects: [""], weight: 0.2)
+    var example5 = Parameters(name: "LizieChu", type: [types.exampleType]/*"Grass-Electro"*/, health: 254, alive: true, moveSet: [moves.punch]/*["Slash","Leaf Blast","Summon Spark","Flower Bloom"]*/, effects: [""], weight: 0.2)
     
-    var example6 = Parameters(name: "LizieChu", type: [types.exampleType]/*"Grass-Electro"*/, health: 255, alive: true, moveSet: [moves.exampleMove]/*["Slash","Leaf Blast","Summon Spark","Flower Bloom"]*/, effects: [""], weight: 0.2)
+    var example6 = Parameters(name: "LizieChu", type: [types.exampleType]/*"Grass-Electro"*/, health: 255, alive: true, moveSet: [moves.punch]/*["Slash","Leaf Blast","Summon Spark","Flower Bloom"]*/, effects: [""], weight: 0.2)
     
-    var exampleFirePikamon = Parameters(name: "Firemander", type: [types.exampleFireType], health: 25, alive: true, moveSet: [moves.exampleFireAttack], effects: [""], weight: 0.01)
+    var exampleFirePikamon = Parameters(name: "Firemander", type: [types.fire], health: 25, alive: true, moveSet: [moves.flameTosser], effects: [""], weight: 0.01)
     
     var pikamonList = [Parameters]()
     
