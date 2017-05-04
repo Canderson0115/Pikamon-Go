@@ -20,6 +20,7 @@ class Parameters
     var effects = [String]()
     var weight = Double()
     
+    
     init(name: String, type: [TypeParameters], health: Int, alive: Bool, moveSet: [MoveParameters], effects: [String], weight: Double)
     {
         self.name = name
@@ -58,6 +59,7 @@ class MoveParameters
     var damage = Int()
     var powerPoints = [Int]()
     var damageMultiplier = Double()
+    var type = String()
     
     init(name: String, damage: Int, powerPoints: [Int], damageMultiplier: Double)
     {
@@ -75,7 +77,10 @@ class MoveParameters
 
 class MoveClass
 {
+    
     let exampleMove = MoveParameters(name: "Example Name", damage: 10, powerPoints: [4,4], damageMultiplier: 1.0)
+    
+    let exampleFireAttack = MoveParameters(name: "FIRE >:D", damage: 1000, powerPoints: [5, 5], damageMultiplier: 1.0)
     
 }
 
@@ -86,7 +91,10 @@ var moves = MoveClass()
 
 class TypesClass
 {
+    
     let exampleType = TypeParameters(classId: 0, moveSet: [moves.exampleMove])
+    
+    let exampleFireType = TypeParameters(classId: 1, moveSet: [moves.exampleFireAttack])
     
 }
 
@@ -109,11 +117,13 @@ class PikamonClass
     
     var example6 = Parameters(name: "LizieChu", type: [types.exampleType]/*"Grass-Electro"*/, health: 255, alive: true, moveSet: [moves.exampleMove]/*["Slash","Leaf Blast","Summon Spark","Flower Bloom"]*/, effects: [""], weight: 0.2)
     
+    var exampleFirePikamon = Parameters(name: "Firemander", type: [types.exampleFireType], health: 25, alive: true, moveSet: [moves.exampleFireAttack], effects: [""], weight: 0.01)
+    
     var pikamonList = [Parameters]()
     
     init()
     {
-        pikamonList = [example1,example2,example3,example4,example5,example6]
+        pikamonList = [example1,example2,example3,example4,example5,example6, exampleFirePikamon]
     }
     
     //var LizieChu = Parameters(name: "LizieChu", type: "Grass-Electro", health: 250, alive: true, moveSet: ["Slash","Leaf Blast","Summon Spark","Flower Bloom"], effects: [""], weight: 0.2)

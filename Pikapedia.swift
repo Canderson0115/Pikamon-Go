@@ -13,7 +13,9 @@ class Pikapedia: UIViewController, UITableViewDataSource, UITableViewDelegate
 
 @IBOutlet weak var PikamonList: UITableView!
     
-    var pikamonNames = [String]()
+    var pikapedia = [String:[String]]()
+    
+    var pikamonDetails = [String]()
     
     override func viewDidLoad()
     {
@@ -21,24 +23,51 @@ class Pikapedia: UIViewController, UITableViewDataSource, UITableViewDelegate
         
         PikamonList.dataSource = self
         
+        PikamonList.delegate = self
+        
+        
+        
         //pikamonNames = pikamon.listPropertiesWithValues()
         
-        func help()
+        func createPikapedia()
         {
+            
+            
             for i in pikamon.pikamonList
             {
-                print(i.health)
-                pikamonNames.append(i.name)
+                
+                pikamonDetails.append("Health: " + String(i.health))
+                
+                pikamonDetails.append(String(i.type[0].classIdentifier))
+                
+                for s in i.type
+                {
+                    pikamonDetails.append("Type: " + String(s.classIdentifier))
+                }
+                
+                pikamonDetails.append("Health: " + String(i.weight))
+                
+                for p in i.moveSet
+                {
+                    pikamonDetails.append(String(p.name))
+                }
+                
+                pikapedia[i.name] = pikamonDetails
+                
+                pikamonDetails.removeAll()
+                
             }
         }
         
-        help()
+        createPikapedia()
+        
+        print(pikapedia)
         
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return pikamonNames.count
+        return pikapedia.count
     }
     
     
@@ -46,7 +75,14 @@ class Pikapedia: UIViewController, UITableViewDataSource, UITableViewDelegate
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell")! as UITableViewCell
         
-        cell.textLabel?.text = pikamonNames[indexPath.row]
+        var array: [String] = []
+        
+        for x in pikapedia
+        {
+            array.append(x.key)
+        }
+        
+        cell.textLabel?.text = array[indexPath.row]
         
         return cell
 
