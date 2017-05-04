@@ -11,9 +11,11 @@ import UIKit
 class BattleViewController: UIViewController {
 
     @IBOutlet weak var enemyNameLabel: UILabel!
+    @IBOutlet weak var enemyHealthLabel: UILabel!
     @IBOutlet weak var enemyImageView: UIImageView!
     
     @IBOutlet weak var teamNameLabel: UILabel!
+    @IBOutlet weak var teamHealthLabel: UILabel!
     @IBOutlet weak var teamImageView: UIImageView!
     
     @IBOutlet weak var skillOneLabel: UILabel!
