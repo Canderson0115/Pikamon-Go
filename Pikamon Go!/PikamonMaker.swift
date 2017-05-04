@@ -109,17 +109,15 @@ var types = TypesClass()
 class PikamonClass
 {
     
-    var pokéchu = Parameters(name: "LizieChu", type: [types.exampleType]/*"Grass-Electro"*/, health: 250, alive: true, moveSet: [moves.punch]/*["Slash","Leaf Blast","Summon Spark","Flower Bloom"]*/, effects: [""], weight: 0.2)
+    var LizieChu = Parameters(name: "LizieChu", type: [types.exampleType], health: 250, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2)
     
-    var example2 = Parameters(name: "LizieChu", type: [types.exampleType]/*"Grass-Electro"*/, health: 251, alive: true, moveSet: [moves.punch]/*["Slash","Leaf Blast","Summon Spark","Flower Bloom"]*/, effects: [""], weight: 0.2)
+    var Glacierite = Parameters(name: "Glacierite", type: [types.exampleType], health: 250, alive: true, moveSet: [moves.punch], effects: ["ExampleEffect"], weight: 0.2)
     
-    var example3 = Parameters(name: "LizieChu", type: [types.exampleType]/*"Grass-Electro"*/, health: 252, alive: true, moveSet: [moves.punch]/*["Slash","Leaf Blast","Summon Spark","Flower Bloom"]*/, effects: [""], weight: 0.2)
+    var Bochtite = Parameters(name: "Bochtite", type: [types.exampleType], health: 250, alive: true, moveSet: [moves.punch], effects: ["ExampleEffect"], weight: 0.2)
     
-    var example4 = Parameters(name: "LizieChu", type: [types.exampleType]/*"Grass-Electro"*/, health: 253, alive: true, moveSet: [moves.punch]/*["Slash","Leaf Blast","Summon Spark","Flower Bloom"]*/, effects: [""], weight: 0.2)
+    var Trithyta = Parameters(name: "Trithyta", type: [types.exampleType], health: 500, alive: true, moveSet: [moves.punch], effects: ["ExampleEffect"], weight: 0.2)
     
-    var example5 = Parameters(name: "LizieChu", type: [types.exampleType]/*"Grass-Electro"*/, health: 254, alive: true, moveSet: [moves.punch]/*["Slash","Leaf Blast","Summon Spark","Flower Bloom"]*/, effects: [""], weight: 0.2)
-    
-    var example6 = Parameters(name: "LizieChu", type: [types.exampleType]/*"Grass-Electro"*/, health: 255, alive: true, moveSet: [moves.punch]/*["Slash","Leaf Blast","Summon Spark","Flower Bloom"]*/, effects: [""], weight: 0.2)
+    var Pokéchew = Parameters(name: "Pokéchew", type: [types.exampleType], health: 100, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2)
     
     var exampleFirePikamon = Parameters(name: "Firemander", type: [types.fire], health: 25, alive: true, moveSet: [moves.flameTosser], effects: [""], weight: 0.01)
     
@@ -127,7 +125,7 @@ class PikamonClass
     
     init()
     {
-        pikamonList = [pokéchu,example2,example3,example4,example5,example6, exampleFirePikamon]
+        pikamonList = [Pokéchew, LizieChu, Glacierite, Bochtite, Trithyta]
     }
     
     //var LizieChu = Parameters(name: "LizieChu", type: "Grass-Electro", health: 250, alive: true, moveSet: ["Slash","Leaf Blast","Summon Spark","Flower Bloom"], effects: [""], weight: 0.2)
