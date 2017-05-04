@@ -127,7 +127,7 @@ class PikamonClass
     
     init()
     {
-        pikamonList = [example1,example2,example3,example4,example5,example6, exampleFirePikamon]
+        pikamonList = [pokéchu,example2,example3,example4,example5,example6, exampleFirePikamon]
     }
     
     //var LizieChu = Parameters(name: "LizieChu", type: "Grass-Electro", health: 250, alive: true, moveSet: ["Slash","Leaf Blast","Summon Spark","Flower Bloom"], effects: [""], weight: 0.2)
