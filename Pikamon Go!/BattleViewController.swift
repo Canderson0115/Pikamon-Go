@@ -36,8 +36,8 @@ class BattleViewController: UIViewController {
         
         if randomPikamon == 1
         {
-            enemyNameLabel.text = "\(pikamonEnemies.LizziChu.name)"
-            enemyHealthLabel.text = "\(pikamonEnemies.LizziChu.health)H / \(pikamonEnemies.LizziChu.health)H"
+            enemyNameLabel.text = "\(pikamonEnemies.LizieChu.name)"
+            enemyHealthLabel.text = "\(pikamonEnemies.LizieChu.health)H / \(pikamonEnemies.LizziChu.health)H"
             enemyImageView.image = UIImage(named: "LizziChuImages")!
             
         } else if randomPikamon == 2
