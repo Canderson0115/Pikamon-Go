@@ -11,23 +11,25 @@ import UIKit
 class PikamonClass
 {
     
-    var LizieChu = Parameters(name: "LizieChu", type: [types.exampleType], health: 250, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2)
+    var LizieChu = Parameters(name: "LizieChu", type: [types.normal], health: 250, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2)
     
-    var Glacierite = Parameters(name: "Glacierite", type: [types.exampleType], health: 250, alive: true, moveSet: [moves.punch], effects: ["ExampleEffect"], weight: 0.2)
+    var Glacierite = Parameters(name: "Glacierite", type: [types.normal], health: 250, alive: true, moveSet: [moves.punch], effects: ["ExampleEffect"], weight: 0.2)
     
-    var Bochtite = Parameters(name: "Bochtite", type: [types.exampleType], health: 250, alive: true, moveSet: [moves.punch], effects: ["ExampleEffect"], weight: 0.2)
+    var Bochtite = Parameters(name: "Bochtite", type: [types.normal], health: 250, alive: true, moveSet: [moves.punch], effects: ["ExampleEffect"], weight: 0.2)
     
-    var Trithyta = Parameters(name: "Trithyta", type: [types.exampleType], health: 500, alive: true, moveSet: [moves.punch], effects: ["ExampleEffect"], weight: 0.2)
+    var Trithyta = Parameters(name: "Trithyta", type: [types.normal], health: 500, alive: true, moveSet: [moves.punch], effects: ["ExampleEffect"], weight: 0.2)
     
-    var Pokéchew = Parameters(name: "Pokéchew", type: [types.exampleType], health: 100, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2)
+    var Pokéchew = Parameters(name: "Pokéchew", type: [types.normal], health: 100, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2)
     
-    var exampleFirePikamon = Parameters(name: "Firemander", type: [types.fire], health: 25, alive: true, moveSet: [moves.flameTosser], effects: [""], weight: 0.01)
+    var Firemander = Parameters(name: "Firemander", type: [types.fire], health: 25, alive: true, moveSet: [moves.punch, moves.flameTosser], effects: [""], weight: 0.01)
+    
+    var Lonelysore = Parameters(name: "Lonelysore", type: [types.normal], health: 30, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.01)
     
     var pikamonList = [Parameters]()
     
     init()
     {
-        pikamonList = [Pokéchew, LizieChu, Glacierite, Bochtite, Trithyta]
+        pikamonList = [Pokéchew, LizieChu, Glacierite, Bochtite, Trithyta, Firemander]
     }
     
     //var LizieChu = Parameters(name: "LizieChu", type: "Grass-Electro", health: 250, alive: true, moveSet: ["Slash","Leaf Blast","Summon Spark","Flower Bloom"], effects: [""], weight: 0.2)

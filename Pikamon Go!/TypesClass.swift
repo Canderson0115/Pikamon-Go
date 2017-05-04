@@ -11,7 +11,7 @@ import UIKit
 class TypesClass
 {
     
-    let exampleType = TypeParameters(classId: 0, moveSet: [moves.punch])
+    let normal = TypeParameters(classId: 0, moveSet: [moves.punch])
     
     let fire = TypeParameters(classId: 1, moveSet: [moves.flameTosser])
     
