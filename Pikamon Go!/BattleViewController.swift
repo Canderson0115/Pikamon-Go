@@ -11,9 +11,11 @@ import UIKit
 class BattleViewController: UIViewController {
 
     @IBOutlet weak var enemyNameLabel: UILabel!
+    @IBOutlet weak var enemyHealthLabel: UILabel!
     @IBOutlet weak var enemyImageView: UIImageView!
     
     @IBOutlet weak var teamNameLabel: UILabel!
+    @IBOutlet weak var teamHealthLabel: UILabel!
     @IBOutlet weak var teamImageView: UIImageView!
     
     @IBOutlet weak var skillOneLabel: UILabel!
@@ -62,7 +64,7 @@ class BattleViewController: UIViewController {
         {
             enemyNameLabel.text = "\(pikamonEnemies.Pokéchew.name)"
             enemyHealthLabel.text = "\(pikamonEnemies.Pokéchew.health)H / \(pikamonEnemies.Pokéchew.health)H"
-            enemyImageView.image = UIImage(named: "PokeChewImage")!
+ //           enemyImageView.image = UIImage(named: "PokeChewImage")!
             
         }
         
