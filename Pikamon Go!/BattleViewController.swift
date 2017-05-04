@@ -21,16 +21,51 @@ class BattleViewController: UIViewController {
     @IBOutlet weak var skillThreeLabel: UILabel!
     @IBOutlet weak var skillFourLabel: UILabel!
     
+    var pikamonEnemies = PikamonClass()
+    //    var player = currentPikamon()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.view.backgroundColor = UIColor.blue
         
+        //        teamNameLabel.text = "\(player.currentPikamonName)"
+        //        teamHealthLabel.text = "\(player.currentPikamon.health)H / \(player.currentPikamon.health)H"
+        
+        
+        let randomPikamon = 1 + Int(arc4random_uniform(5))
+        
+        if randomPikamon == 1
+        {
+            enemyNameLabel.text = "\(pikamonEnemies.LizziChu.name)"
+            enemyHealthLabel.text = "\(pikamonEnemies.LizziChu.health)H / \(pikamonEnemies.LizziChu.health)H"
+            enemyImageView.image = UIImage(named: "LizziChuImages")!
+            
+        } else if randomPikamon == 2
+        {
+            enemyNameLabel.text = "\(pikamonEnemies.Glacierite.name)"
+            enemyHealthLabel.text = "\(pikamonEnemies.Glacierite.health)H / \(pikamonEnemies.Glacierite.health)H"
+            
+            
+        } else if randomPikamon == 3
+        {
+            enemyNameLabel.text = "\(pikamonEnemies.Bochtite.name)"
+            enemyHealthLabel.text = "\(pikamonEnemies.Bochtite.health)H / \(pikamonEnemies.Bochtite.health)H"
+            
+            
+        } else if randomPikamon == 4
+        {
+            enemyNameLabel.text = "\(pikamonEnemies.Trithyta.name)"
+            enemyHealthLabel.text = "\(pikamonEnemies.Trithyta.health)H / \(pikamonEnemies.Trithyta.health)H"
+            
+            
+        } else if randomPikamon == 5
+        {
+            enemyNameLabel.text = "\(pikamonEnemies.Pokéchew.name)"
+            enemyHealthLabel.text = "\(pikamonEnemies.Pokéchew.health)H / \(pikamonEnemies.Pokéchew.health)H"
+            enemyImageView.image = UIImage(named: "PokeChewImage")!
+            
+        }
         
     }
-
-   
-    
-    
 
 }
