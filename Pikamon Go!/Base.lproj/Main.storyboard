@@ -21,13 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYc-GN-2b4">
-                                <rect key="frame" x="16" y="618" width="343" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmh-RJ-ZSD">
                                 <rect key="frame" x="145" y="492" width="85" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -46,11 +39,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soP-rv-hx9">
+                                <rect key="frame" x="16" y="618" width="343" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="VGN-3r-dzF"/>
+                                    <constraint firstAttribute="width" constant="343" id="WFP-jQ-msZ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Ox2-SL-rdl" kind="show" id="FSf-Lz-t5G"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="soP-rv-hx9" firstAttribute="top" secondItem="zpx-Pu-HbJ" secondAttribute="bottom" constant="8" id="HiU-Ik-l6C"/>
                             <constraint firstItem="zpx-Pu-HbJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zbm-tb-IWR"/>
+                            <constraint firstItem="soP-rv-hx9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ipL-Rg-cdg"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zpx-Pu-HbJ" secondAttribute="bottom" constant="57" id="wWI-Bl-Jxe"/>
                         </constraints>
                         <connections>
@@ -59,7 +65,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="7ST-Zu-nEP"/>
                     <connections>
-                        <outlet property="tapToContinueLabel" destination="VYc-GN-2b4" id="x0g-4p-6cY"/>
+                        <outlet property="tapToContinueText" destination="soP-rv-hx9" id="HOB-cc-K2f"/>
                         <outlet property="textLabel" destination="zpx-Pu-HbJ" id="naX-oT-ded"/>
                     </connections>
                 </viewController>
@@ -368,4 +374,7 @@
             <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qYV-v6-8QB"/>
+    </inferredMetricsTieBreakers>
 </document>
