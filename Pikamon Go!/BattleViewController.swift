@@ -40,7 +40,7 @@ class BattleViewController: UIViewController {
         {
             enemyNameLabel.text = "\(pikamonEnemies.LizieChu.name)"
             enemyHealthLabel.text = "\(pikamonEnemies.LizieChu.health)H / \(pikamonEnemies.LizieChu.health)H"
-            //enemyImageView.image = UIImage(named: "LizziChuImages")!
+            enemyImageView.image = UIImage(named: "lizzichuImage")!
             
         } else if randomPikamon == 2
         {
@@ -64,7 +64,7 @@ class BattleViewController: UIViewController {
         {
             enemyNameLabel.text = "\(pikamonEnemies.Pokéchew.name)"
             enemyHealthLabel.text = "\(pikamonEnemies.Pokéchew.health)H / \(pikamonEnemies.Pokéchew.health)H"
- //           enemyImageView.image = UIImage(named: "PokeChewImage")!
+            enemyImageView.image = UIImage(named: "pokechewimage")!
             
         }
         
