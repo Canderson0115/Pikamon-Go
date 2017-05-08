@@ -18,10 +18,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var tapToContinueText: UIButton!
     
     
-    
+    //Used to move dialogue on to the next sentence
     var numberOfTaps = 0
     
-    var help = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +38,8 @@ class ViewController: UIViewController {
     
     @IBAction func tapToContinue(_ sender: UITapGestureRecognizer) {
         
+        //All of this stuff is opening dialogue.
+        
         numberOfTaps += 1
         
         if numberOfTaps == 1
@@ -53,7 +54,7 @@ class ViewController: UIViewController {
         {
             textLabel.adjustsFontForContentSizeCategory = true
             
-            textLabel.text = "Pikamon are creatures that inhabit this world. Some use them to battle. Others... Well, that's actually about it."
+            textLabel.text = "Pikamon are creatures that inhabit this world. They are used only for battle."
         }
         else if numberOfTaps == 4
         {
@@ -101,6 +102,64 @@ class ViewController: UIViewController {
             
         }
         else if numberOfTaps == 6
+        {
+            textLabel.text = "Ok, now it's time for you to choose your first Poké-- that is, Pikamon."
+        }
+        else if numberOfTaps == 7
+        {
+            
+            let alert3 = UIAlertController(title: "Who do you choose?", message: "", preferredStyle: .alert)
+            
+            alert3.addAction(UIAlertAction(title: "Firemander", style: .default, handler: { (response) in
+                
+                self.player.pikamonInInventory.append(pikamon.Firemander)
+                
+                self.textLabel.text = "Firemander, the fire type Pikamon. A fine choice. This is the one you want?"
+                
+            }))
+            
+            alert3.addAction(UIAlertAction(title: "Lonelysore", style: .default, handler: { (response) in
+                
+                self.player.pikamonInInventory.append(pikamon.Firemander)
+                
+                self.textLabel.text = "Lonelysore, the grass type Pikamon. Seriously? This is the one you want?"
+                
+            }))
+            
+            
+            //We need a new name for Squirtle
+            alert3.addAction(UIAlertAction(title: "[Squirtle]", style: .default, handler: { (response) in
+                
+                self.player.pikamonInInventory.append(pikamon.Pokéchew)
+                
+                self.textLabel.text = "[Squirtle], the [water] type Pikamon. This is the one you want?"
+                
+            }))
+            
+            present(alert3, animated: true, completion: nil)
+            
+        }
+        else if numberOfTaps == 8
+        {
+            let alert4 = UIAlertController(title: "Are you sure?", message: "", preferredStyle: .alert)
+            
+            alert4.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+                
+                self.textLabel.text = "OK, then. You've decided on \(self.player.pikamonInInventory[0].name)."
+                
+            }))
+            
+            alert4.addAction(UIAlertAction(title: "No", style: .default, handler: { (action) in
+                
+                self.textLabel.text = "OK then, which one do you want?"
+                
+                self.numberOfTaps = 6
+                
+            }))
+            
+            present(alert4, animated: true, completion: nil)
+        }
+        else if numberOfTaps == 9
         {
             textLabel.text = "Now, it's time to enter the world of Pikamon!"
             
