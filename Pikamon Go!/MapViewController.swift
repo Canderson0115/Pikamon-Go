@@ -21,6 +21,7 @@ extension Dictionary where Value: Equatable {
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
 {
+    var pikamonEnemiesClass = PikamonEnemies()
     
     
     @IBOutlet weak var mapViewBoard: MKMapView!
@@ -166,6 +167,18 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             }
         }
 
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "battleSegue"
+        {
+            let pikamonEnemiesTransfer = pikamonEnemiesClass
+            let newVC = segue.destination as! BattleViewController
+            newVC.currentEnemy = pikamonEnemiesTransfer
+            
+            print("to")
+        }
+        
     }
         
 }

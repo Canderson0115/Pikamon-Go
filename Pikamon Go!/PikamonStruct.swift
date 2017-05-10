@@ -13,7 +13,7 @@ struct PikamonEnemies
     
         
         var LizieChu = Parameters(name: "LizieChu", type: [types.normal], health: 250, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2)
-        
+    
         var Glacierite = Parameters(name: "Glacierite", type: [types.normal], health: 250, alive: true, moveSet: [moves.punch], effects: ["ExampleEffect"], weight: 0.2)
         
         var Bochtite = Parameters(name: "Bochtite", type: [types.normal], health: 250, alive: true, moveSet: [moves.punch], effects: ["ExampleEffect"], weight: 0.2)
@@ -27,11 +27,9 @@ struct PikamonEnemies
         var Lonelysore = Parameters(name: "Lonelysore", type: [types.normal], health: 30, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.01)
         
         var pikamonList = [Parameters]()
-        
-        init()
-        {
-            pikamonList = [Pokéchew, LizieChu, Glacierite, Bochtite, Trithyta, Firemander]
-        }
+    
+    
+        var pikamonEnemiesInInventory: [Parameters] = [pikamonEnemies.Pokéchew,pikamonEnemies.Bochtite,pikamonEnemies.Firemander,pikamonEnemies.Glacierite,pikamonEnemies.LizieChu,pikamonEnemies.Lonelysore,pikamonEnemies.Trithyta]
         
         //var LizieChu = Parameters(name: "LizieChu", type: "Grass-Electro", health: 250, alive: true, moveSet: ["Slash","Leaf Blast","Summon Spark","Flower Bloom"], effects: [""], weight: 0.2)
         

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 //Parameters for Pikamon
 
@@ -19,6 +20,7 @@ class Parameters
     var moveSet = [MoveParameters]()
     var effects = [String]()
     var weight = Double()
+ //   var image = UIImage()
     
     
     init(name: String, type: [TypeParameters], health: Int, alive: Bool, moveSet: [MoveParameters], effects: [String], weight: Double)
@@ -30,6 +32,7 @@ class Parameters
         self.moveSet = moveSet
         self.effects = effects
         self.weight = weight
+//        self.image = image
         
     }
     

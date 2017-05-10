@@ -25,11 +25,10 @@ class BattleViewController: UIViewController {
     
     @IBOutlet weak var gameConsole: UILabel!
     
-    var pikamonEnemies = PikamonEnemies()
-    var pikamonEnemiesClass2 = PikamonEnemies()
+    var currentEnemy = PikamonEnemies()
+    var currentEnemtClass2 = PikamonEnemies()
     
     var player = Player()
-    
     
     
     override func viewDidLoad() {
@@ -46,46 +45,56 @@ class BattleViewController: UIViewController {
         
         let randomPikamon = 1 + Int(arc4random_uniform(1))
         
-        if randomPikamon == 1
+        if randomPikamon == 2
         {
-            enemyNameLabel.text = "\(pikamonEnemies.LizieChu.name)"
-            enemyHealthLabel.text = "\(pikamonEnemies.LizieChu.health)H / \(pikamonEnemies.LizieChu.health)H"
-            enemyImageView.image = UIImage(named: "lizzichuImage")!
-            gameConsole.text = "[Matt] Lizzichu I release you!"
+            let movedElement = currentEnemy.pikamonEnemiesInInventory.remove(at: 1)
+            currentEnemy.pikamonEnemiesInInventory.insert(movedElement, at: 0)
             
-            
-        } else if randomPikamon == 2
-        {
-            enemyNameLabel.text = "\(pikamonEnemies.Glacierite.name)"
-            enemyHealthLabel.text = "\(pikamonEnemies.Glacierite.health)H / \(pikamonEnemies.Glacierite.health)H"
-            
-            gameConsole.text = "[Matt] Glacierite I release you!"
+            let movedElementSec = currentEnemtClass2.pikamonEnemiesInInventory.remove(at: 1)
+            currentEnemtClass2.pikamonEnemiesInInventory.insert(movedElementSec, at: 0)
             
             
         } else if randomPikamon == 3
         {
-            enemyNameLabel.text = "\(pikamonEnemies.Bochtite.name)"
-            enemyHealthLabel.text = "\(pikamonEnemies.Bochtite.health)H / \(pikamonEnemies.Bochtite.health)H"
+            let movedElement = currentEnemy.pikamonEnemiesInInventory.remove(at: 2)
+            currentEnemy.pikamonEnemiesInInventory.insert(movedElement, at: 0)
             
-            gameConsole.text = "[Matt] Bochtite I release you!"
+            let movedElementSec = currentEnemtClass2.pikamonEnemiesInInventory.remove(at: 2)
+            currentEnemtClass2.pikamonEnemiesInInventory.insert(movedElementSec, at: 0)
             
             
         } else if randomPikamon == 4
         {
-            enemyNameLabel.text = "\(pikamonEnemies.Trithyta.name)"
-            enemyHealthLabel.text = "\(pikamonEnemies.Trithyta.health)H / \(pikamonEnemies.Trithyta.health)H"
+            let movedElement = currentEnemy.pikamonEnemiesInInventory.remove(at: 3)
+            currentEnemy.pikamonEnemiesInInventory.insert(movedElement, at: 0)
             
-            gameConsole.text = "[Matt] Trithyta I release you!"
+            let movedElementSec = currentEnemtClass2.pikamonEnemiesInInventory.remove(at: 3)
+            currentEnemtClass2.pikamonEnemiesInInventory.insert(movedElementSec, at: 0)
             
             
         } else if randomPikamon == 5
         {
-            enemyNameLabel.text = "\(pikamonEnemies.Pokéchew.name)"
-            enemyHealthLabel.text = "\(pikamonEnemies.Pokéchew.health)H / \(pikamonEnemies.Pokéchew.health)H"
-            enemyImageView.image = UIImage(named: "pokechewimage")!
-            gameConsole.text = "[Matt] Pokéchew I release you!"
+            let movedElement = currentEnemy.pikamonEnemiesInInventory.remove(at: 4)
+            currentEnemy.pikamonEnemiesInInventory.insert(movedElement, at: 0)
+            
+            let movedElementSec = currentEnemtClass2.pikamonEnemiesInInventory.remove(at: 4)
+            currentEnemtClass2.pikamonEnemiesInInventory.insert(movedElementSec, at: 0)
+            
+            
+        } else if randomPikamon == 6
+        {
+            let movedElement = currentEnemy.pikamonEnemiesInInventory.remove(at: 5)
+            currentEnemy.pikamonEnemiesInInventory.insert(movedElement, at: 0)
+            
+            let movedElementSec = currentEnemtClass2.pikamonEnemiesInInventory.remove(at: 5)
+            currentEnemtClass2.pikamonEnemiesInInventory.insert(movedElementSec, at: 0)
             
         }
+        
+        enemyNameLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].name)"
+        enemyHealthLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].health)H / \(currentEnemtClass2.pikamonEnemiesInInventory[0].health)H"
+//        enemyImageView.image = currentEnemy.pikamonEnemiesInInventory[0].image
+        gameConsole.text = "[Matt] \(currentEnemy.pikamonEnemiesInInventory[0].name) I release you!"
         
     }
 
@@ -101,19 +110,22 @@ class BattleViewController: UIViewController {
         {
             if player.pikamonInInventory[0].moveSet[0].name == "punch"
             {
-                pikamonEnemies.LizieChu.health -= player.pikamonInInventory[0].moveSet[0].damage
-/*              pikamonEnemies.Bochtite.health -= player.pikamonInInventory[0].moveSet[0].damage
-                pikamonEnemies.Firemander.health -= player.pikamonInInventory[0].moveSet[0].damage
-                pikamonEnemies.Glacierite.health -= player.pikamonInInventory[0].moveSet[0].damage
-                pikamonEnemies.Lonelysore.health -= player.pikamonInInventory[0].moveSet[0].damage
-                pikamonEnemies.Pokéchew.health -= player.pikamonInInventory[0].moveSet[0].damage
-                pikamonEnemies.Trithyta.health -= player.pikamonInInventory[0].moveSet[0].damage
- */
+                currentEnemy.pikamonEnemiesInInventory[0].health -= player.pikamonInInventory[0].moveSet[0].damage
+                enemyHealthLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].health)H / \(currentEnemtClass2.pikamonEnemiesInInventory[0].health)H"
                 
-                enemyHealthLabel.text = "\(pikamonEnemies.LizieChu.health)H / \(pikamonEnemiesClass2.LizieChu.health)H"
-                gameConsole.text = " "
+                gameConsole.text = "Enemy Pikamon takes \(player.pikamonInInventory[0].moveSet[0].damage) damage"
             }
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        currentEnemy = currentEnemtClass2
+        
+        let pikamonEnemiesTransfer = pikamonEnemies
+        let newVC = segue.destination as! MapViewController
+        newVC.pikamonEnemiesClass = pikamonEnemiesTransfer
+        
+        print("hi")
     }
     
 }
