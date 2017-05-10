@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "whiteness.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "IMG_0225.PNG",
       "scale" : "2x"
     },
     {

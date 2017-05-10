@@ -21,24 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmh-RJ-ZSD">
-                                <rect key="frame" x="145" y="492" width="85" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Skip Tutorial"/>
-                                <connections>
-                                    <segue destination="Ox2-SL-rdl" kind="show" id="qYV-v6-8QB"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Text" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpx-Pu-HbJ">
-                                <rect key="frame" x="16" y="530" width="343" height="80"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="KHZ-Ed-3GZ"/>
-                                    <constraint firstAttribute="width" constant="343" id="mk7-sz-Xke"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soP-rv-hx9">
                                 <rect key="frame" x="16" y="618" width="343" height="41"/>
                                 <constraints>
@@ -50,14 +32,41 @@
                                     <segue destination="Ox2-SL-rdl" kind="show" id="FSf-Lz-t5G"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aNu-wc-Ddb">
+                                <rect key="frame" x="16" y="187" width="343" height="297"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="297" id="Isz-vJ-iJM"/>
+                                    <constraint firstAttribute="width" constant="343" id="MVc-Lp-j7g"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDq-66-K2e">
+                                <rect key="frame" x="16" y="530" width="343" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="BqS-Xa-jlZ"/>
+                                    <constraint firstAttribute="height" constant="80" id="WpJ-iE-fNC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmh-RJ-ZSD">
+                                <rect key="frame" x="145" y="492" width="85" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Skip Tutorial"/>
+                                <connections>
+                                    <segue destination="Ox2-SL-rdl" kind="show" id="qYV-v6-8QB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="soP-rv-hx9" firstAttribute="top" secondItem="zpx-Pu-HbJ" secondAttribute="bottom" constant="8" id="HiU-Ik-l6C"/>
-                            <constraint firstItem="zpx-Pu-HbJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zbm-tb-IWR"/>
+                            <constraint firstItem="aNu-wc-Ddb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Tn-ci-KVj"/>
+                            <constraint firstItem="CDq-66-K2e" firstAttribute="top" secondItem="aNu-wc-Ddb" secondAttribute="bottom" constant="46" id="Ax9-Bq-Fkk"/>
+                            <constraint firstItem="CDq-66-K2e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ajo-1X-ijF"/>
+                            <constraint firstItem="soP-rv-hx9" firstAttribute="top" secondItem="CDq-66-K2e" secondAttribute="bottom" constant="8" id="hkX-M3-8hr"/>
                             <constraint firstItem="soP-rv-hx9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ipL-Rg-cdg"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zpx-Pu-HbJ" secondAttribute="bottom" constant="57" id="wWI-Bl-Jxe"/>
+                            <constraint firstAttribute="bottom" secondItem="CDq-66-K2e" secondAttribute="bottom" constant="57" id="xwj-n4-KsI"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="km4-FV-L5w" appends="YES" id="6kd-UQ-IOQ"/>
@@ -65,8 +74,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="7ST-Zu-nEP"/>
                     <connections>
+                        <outlet property="imageView" destination="aNu-wc-Ddb" id="NnV-OG-iGR"/>
                         <outlet property="tapToContinueText" destination="soP-rv-hx9" id="HOB-cc-K2f"/>
-                        <outlet property="textLabel" destination="zpx-Pu-HbJ" id="naX-oT-ded"/>
+                        <outlet property="textLabel" destination="CDq-66-K2e" id="FZI-5w-7yn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

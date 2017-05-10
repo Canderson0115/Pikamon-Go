@@ -13,7 +13,9 @@ class ViewController: UIViewController {
     var player = Player()
     
     
-    @IBOutlet weak var textLabel: UITextView!
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var textLabel: UILabel!
     
     @IBOutlet weak var tapToContinueText: UIButton!
     
@@ -65,12 +67,18 @@ class ViewController: UIViewController {
             let alert = UIAlertController(title: "What's your name?", message: "", preferredStyle: .alert)
             
             alert.addTextField(configurationHandler: { (alertTextField) in
+                
                 alertTextField.placeholder = "Name"
+                
+                alertTextField.autocapitalizationType = UITextAutocapitalizationType.sentences
+                
             })
             
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (response) in
                 
-                self.player.name = (alert.textFields?[0].text)!
+                let nameAnswer = alert.textFields?[0].text!
+                
+                self.player.name = nameAnswer!
                 
                 self.textLabel.text = "\(self.player.name), huh? That's a fine name."
                 
@@ -114,13 +122,17 @@ class ViewController: UIViewController {
                 
                 self.player.pikamonInInventory.append(pikamon.Firemander)
                 
-                self.textLabel.text = "Firemander, the fire type Pikamon. A fine choice. This is the one you want?"
+                self.imageView.image = UIImage(named: "firemanderimage")
+                
+                self.textLabel.text = "Firemander, the fire type Pikamon. This is the one you want?"
                 
             }))
             
             alert3.addAction(UIAlertAction(title: "Lonelysore", style: .default, handler: { (response) in
                 
-                self.player.pikamonInInventory.append(pikamon.Firemander)
+                self.player.pikamonInInventory.append(pikamon.Lonelysore)
+                
+                self.imageView.image = UIImage(named: "lonlisoreimage")
                 
                 self.textLabel.text = "Lonelysore, the grass type Pikamon. Seriously? This is the one you want?"
                 
@@ -128,11 +140,13 @@ class ViewController: UIViewController {
             
             
             //We need a new name for Squirtle
-            alert3.addAction(UIAlertAction(title: "[Squirtle]", style: .default, handler: { (response) in
+            alert3.addAction(UIAlertAction(title: "Purple", style: .default, handler: { (response) in
                 
-                self.player.pikamonInInventory.append(pikamon.Pokéchew)
+                self.player.pikamonInInventory.append(pikamon.purple)
                 
-                self.textLabel.text = "[Squirtle], the [water] type Pikamon. This is the one you want?"
+                self.imageView.image = UIImage(named: "whiteness")
+                
+                self.textLabel.text = "Purple, the water type Pikamon. This is the one you want?"
                 
             }))
             
@@ -153,6 +167,8 @@ class ViewController: UIViewController {
                 
                 self.textLabel.text = "OK then, which one do you want?"
                 
+                self.imageView.image = UIImage(named: "whiteness")
+                
                 self.numberOfTaps = 6
                 
             }))
@@ -161,7 +177,7 @@ class ViewController: UIViewController {
         }
         else if numberOfTaps == 9
         {
-            textLabel.text = "Now, it's time to enter the world of Pikamon!"
+            textLabel.text = "Now, \(self.player.name), it's time to enter the world of Pikamon!"
             
             tapToContinueText.titleLabel?.text = "Tap here to continue."
             
