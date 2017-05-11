@@ -17,6 +17,8 @@ class Pikapedia: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     var pikamonDetails = [String]()
     
+    var seguePath = String()
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -24,10 +26,6 @@ class Pikapedia: UIViewController, UITableViewDataSource, UITableViewDelegate
         PikamonList.dataSource = self
         
         PikamonList.delegate = self
-        
-        
-        
-        //pikamonNames = pikamon.listPropertiesWithValues()
         
         func createPikapedia()
         {
@@ -38,8 +36,6 @@ class Pikapedia: UIViewController, UITableViewDataSource, UITableViewDelegate
                 
                 pikamonDetails.append("Health: " + String(i.health))
                 
-                pikamonDetails.append(String(i.type[0].classIdentifier))
-                
                 for s in i.type
                 {
                     pikamonDetails.append("Type: " + String(s.classIdentifier))
@@ -47,10 +43,14 @@ class Pikapedia: UIViewController, UITableViewDataSource, UITableViewDelegate
                 
                 pikamonDetails.append("Health: " + String(i.weight))
                 
+                var temp = String()
+                
                 for p in i.moveSet
                 {
-                    pikamonDetails.append(String(p.name))
+                    temp.append(String(p.name))
                 }
+                
+                pikamonDetails.append(String("Moves: \(temp)"))
                 
                 pikapedia[i.name] = pikamonDetails
                 
@@ -86,6 +86,21 @@ class Pikapedia: UIViewController, UITableViewDataSource, UITableViewDelegate
         
         return cell
 
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        
+        seguePath = (tableView.cellForRow(at: indexPath)?.textLabel?.text)!
+        print(seguePath)
+        performSegue(withIdentifier: "detailSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let destination = segue.destination as! DetailView
+        destination.pikapediaDetailData = pikapedia
+        destination.indexS = seguePath
     }
     
 }

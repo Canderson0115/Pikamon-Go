@@ -6,6 +6,7 @@
 //  Copyright © 2017 John Hersey High School. All rights reserved.
 //
 
+import UIKit
 import Foundation
 
 //Parameters for Pikamon
@@ -19,9 +20,15 @@ class Parameters
     var moveSet = [MoveParameters]()
     var effects = [String]()
     var weight = Double()
+    var image = UIImage()
+
     
+    init()
+    {
+        
+    }
     
-    init(name: String, type: [TypeParameters], health: Int, alive: Bool, moveSet: [MoveParameters], effects: [String], weight: Double)
+    init(name: String, type: [TypeParameters], health: Int, alive: Bool, moveSet: [MoveParameters], effects: [String], weight: Double, image: UIImage)
     {
         self.name = name
         self.type = type
@@ -30,8 +37,10 @@ class Parameters
         self.moveSet = moveSet
         self.effects = effects
         self.weight = weight
+        self.image = image
         
     }
+    
     
     
 }
@@ -78,9 +87,15 @@ class MoveParameters
 class MoveClass
 {
     
-    let exampleMove = MoveParameters(name: "Example Name", damage: 10, powerPoints: [4,4], damageMultiplier: 1.0)
+    let punch = MoveParameters(name: "punch", damage: 40, powerPoints: [20,20], damageMultiplier: 1.0)
     
-    let exampleFireAttack = MoveParameters(name: "FIRE >:D", damage: 1000, powerPoints: [5, 5], damageMultiplier: 1.0)
+    let flameTosser = MoveParameters(name: "Flametosser", damage: 60, powerPoints: [5, 5], damageMultiplier: 1.0)
+    
+    let lightningBolt = MoveParameters(name: "Lightningbolt", damage: 55, powerPoints: [15, 15], damageMultiplier: 1.0)
+    
+    let waterSquirt = MoveParameters(name: "Water Squirt", damage: 40, powerPoints: [20, 20], damageMultiplier: 1.0)
+    
+    let soakUp = MoveParameters(name: "Soak Up", damage: 40, powerPoints: [20, 20], damageMultiplier: 1.0)
     
 }
 
@@ -92,10 +107,15 @@ var moves = MoveClass()
 class TypesClass
 {
     
-    let exampleType = TypeParameters(classId: 0, moveSet: [moves.exampleMove])
+    let normal = TypeParameters(classId: 0, moveSet: [moves.punch])
     
-    let exampleFireType = TypeParameters(classId: 1, moveSet: [moves.exampleFireAttack])
+    let fire = TypeParameters(classId: 1, moveSet: [moves.flameTosser, moves.punch])
     
+    let water = TypeParameters(classId: 2, moveSet: [moves.punch, moves.waterSquirt])
+    
+    let electro = TypeParameters(classId: 3, moveSet: [moves.punch, moves.lightningBolt])
+    
+    let grass = TypeParameters(classId: 4, moveSet: [moves.punch, moves.soakUp])
 }
 
 var types = TypesClass()
@@ -105,107 +125,30 @@ var types = TypesClass()
 class PikamonClass
 {
     
-    var example1 = Parameters(name: "LizieChu", type: [types.exampleType]/*"Grass-Electro"*/, health: 250, alive: true, moveSet: [moves.exampleMove]/*["Slash","Leaf Blast","Summon Spark","Flower Bloom"]*/, effects: [""], weight: 0.2)
+    var LizieChu = Parameters(name: "Tatarat", type: [types.normal], health: 250, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "lizzichuImage")!)
     
-    var example2 = Parameters(name: "LizieChu", type: [types.exampleType]/*"Grass-Electro"*/, health: 251, alive: true, moveSet: [moves.exampleMove]/*["Slash","Leaf Blast","Summon Spark","Flower Bloom"]*/, effects: [""], weight: 0.2)
+    var Glacierite = Parameters(name: "Glacierite", type: [types.normal], health: 250, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "whiteness")!)
     
-    var example3 = Parameters(name: "LizieChu", type: [types.exampleType]/*"Grass-Electro"*/, health: 252, alive: true, moveSet: [moves.exampleMove]/*["Slash","Leaf Blast","Summon Spark","Flower Bloom"]*/, effects: [""], weight: 0.2)
+    var Bochtite = Parameters(name: "Bochtite", type: [types.normal], health: 250, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "whiteness")!)
     
-    var example4 = Parameters(name: "LizieChu", type: [types.exampleType]/*"Grass-Electro"*/, health: 253, alive: true, moveSet: [moves.exampleMove]/*["Slash","Leaf Blast","Summon Spark","Flower Bloom"]*/, effects: [""], weight: 0.2)
+    var Trithyta = Parameters(name: "Trithyta", type: [types.normal], health: 500, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "whiteness")!)
     
-    var example5 = Parameters(name: "LizieChu", type: [types.exampleType]/*"Grass-Electro"*/, health: 254, alive: true, moveSet: [moves.exampleMove]/*["Slash","Leaf Blast","Summon Spark","Flower Bloom"]*/, effects: [""], weight: 0.2)
+    var Pokéchew = Parameters(name: "Pokéchew", type: [types.normal], health: 100, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "pokechewimage")!)
     
-    var example6 = Parameters(name: "LizieChu", type: [types.exampleType]/*"Grass-Electro"*/, health: 255, alive: true, moveSet: [moves.exampleMove]/*["Slash","Leaf Blast","Summon Spark","Flower Bloom"]*/, effects: [""], weight: 0.2)
+    var Firemander = Parameters(name: "Firemander", type: [types.fire], health: 25, alive: true, moveSet: [moves.punch, moves.flameTosser], effects: [""], weight: 0.01, image: UIImage(named: "firemanderimage")!)
     
-    var exampleFirePikamon = Parameters(name: "Firemander", type: [types.exampleFireType], health: 25, alive: true, moveSet: [moves.exampleFireAttack], effects: [""], weight: 0.01)
+    var Lonelysore = Parameters(name: "Lonelysore", type: [types.normal], health: 30, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.01, image: UIImage(named: "lonlisoreimage")!)
+    
+    var purple = Parameters(name: "Purple", type: [types.water], health: 28, alive: true, moveSet: [moves.punch, moves.waterSquirt], effects: [""], weight: 0.01, image: UIImage(named: "whiteness")!)
     
     var pikamonList = [Parameters]()
     
     init()
     {
-        pikamonList = [example1,example2,example3,example4,example5,example6, exampleFirePikamon]
-    }
-    
-    //var LizieChu = Parameters(name: "LizieChu", type: "Grass-Electro", health: 250, alive: true, moveSet: ["Slash","Leaf Blast","Summon Spark","Flower Bloom"], effects: [""], weight: 0.2)
-    
-    //var Glacierite = Parameters(name: "Glacierite", type: "Ice-Rock", health: 250, alive: true, moveSet: ["ExampleMove"], effects: ["ExampleEffect"], weight: 0.2)
-    
-    //var Bochtite = Parameters(name: "Bochtite", type: "Ice-Rock", health: 250, alive: true, moveSet: ["ExampleMove"], effects: ["ExampleEffect"], weight: 0.2)
-    
-    //var Trithyta = Parameters(name: "Trithyta", type: "Matter-Electro", health: 500, alive: true, moveSet: ["ExampleMove"], effects: ["ExampleEffect"], weight: 0.2)
-    
-    //var Pokéchew = Parameters(name: "Pokéchew", type: "Electro", health: 100, alive: true, moveSet: ["ExampleLightningMove"], effects: [""], weight: 0.2)
-    
-    /*func makeIterator() -> PikamonIterator
-    {
-        return PikamonIterator(self)
-    }
-    */
-    
-    /*func generate() -> AnyIterator<Any>{
-        let nextIndex = pikamonList.count-1 // Construct a AnyGenerator instance, passing a closure that returns the next car in the iteration
-        return AnyIterator { if (nextIndex < 0) { return nil }
-        return self.pikamonList[nextIndex-1] } }
-    
-    func listPropertiesWithValues(reflect: Mirror? = nil) -> [String]
-    {
-        var returnArray  = [String]()
-        let mirror = reflect ?? Mirror(reflecting: self)
-        for (index, attr) in mirror.children.enumerated() {
-            if let property_name = attr.label as String!
-            {
-            
-                returnArray.append(" \(index):  \(property_name) ")
-            }
-        }
-        return returnArray
-    }
-    
-    func dfs()
-    {
-        for i in pikamon
-    }
-    
-    */
-    
-    
-}
-
-
-/*struct PikamonIterator:IteratorProtocol
-{
-    var pikamon:PikamonClass  // you must know the group in question
-    var pointer:Parameters?  // you must know where you are
-    var i = 0
-    
-    init(_ pikamon:PikamonClass)
-    {
-        // so note those two items
-        self.pikamon = pikamon
-        self.pointer = pikamon.example1
-    }
-    
-    mutating func next() -> Parameters?
-    {
-        // return the next one; careful to return nil at end
-        if self.i != 5
-        {
-        print("oop")
-        let thisOne = self.pointer
-        self.pointer = self.next()
-        self.i = self.i + 1
-        return thisOne
-        }
-        else
-        {
-            return nil
-        }
-
+        pikamonList = [Pokéchew, LizieChu, Glacierite, Bochtite, Trithyta, Firemander]
     }
 }
-
-*/
-
+    
 var pikamon = PikamonClass()
 
 

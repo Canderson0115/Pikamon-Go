@@ -25,8 +25,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     @IBOutlet weak var mapViewBoard: MKMapView!
     
+    var annotations = [Annotation]()
+    var currentAnnotations = [Annotation]()
     var annotationLocations = [Int:CLLocationCoordinate2D]()
     var annotationDistances = [Int: [Int: Double]]()
+    var timer = Timer()
+    var locationMenager = CLLocationManager()
+    var selectedPikamon = Parameters()
     
     //Game boundary coordinates: 42.108516, -88.001374 : 42.073481, -87.937314
     
@@ -36,13 +41,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         self.mapViewBoard.delegate = self
         mapViewBoard.showsPointsOfInterest = true
         mapViewBoard.showsBuildings = true
-        addAnnotations()
+        createAnnotations()
         sortAnnotations()
         createPolyline()
         zoomIn()
+        locationMenager.delegate = self
+        locationMenager.requestWhenInUseAuthorization()
+        mapViewBoard.showsUserLocation = true
+        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.updateAnnotations), userInfo: nil, repeats: true)
         
-        
- 
     }
     
     
@@ -63,6 +70,59 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         let location = CLLocationCoordinate2D(latitude: xCoordinate, longitude: yCoordinate)
         
         return location
+    }
+    
+    //Update annotations on map
+    
+    func updateAnnotations()
+    {
+        mapViewBoard.removeAnnotations(currentAnnotations)
+        
+        let userLocation = CLLocation.init(latitude: mapViewBoard.userLocation.coordinate.latitude, longitude: mapViewBoard.userLocation.coordinate.longitude)
+        
+        for a in annotations
+        {
+            let distance = CLLocation.init(latitude: a.coordinate.latitude, longitude: a.coordinate.longitude).distance(from: userLocation)
+            
+            if distance.isLess(than: 250)
+            {
+                currentAnnotations.append(a)
+            }
+        }
+
+        mapViewBoard.addAnnotations(currentAnnotations)
+        print("yay")
+    }
+    
+    //Assign pikamon based on weight
+    
+    func assign() -> Parameters
+    {
+        var weight = [Double]()
+        
+        for pika in pikamon.pikamonList
+        {
+            weight.append(pika.weight)
+            
+        }
+        
+        func randomNumber(probabilities: [Double]) -> Int
+        {
+    
+            let sum = probabilities.reduce(0, +)
+            let rnd = sum * Double(arc4random_uniform(UInt32.max)) / Double(UInt32.max)
+            var accum = 0.0
+            for (i, p) in probabilities.enumerated() {
+                accum += p
+                if rnd < accum {
+                    return i
+                }
+            }
+            return (probabilities.count - 1)
+        }
+        
+        return(pikamon.pikamonList[randomNumber(probabilities: weight)])
+
     }
     
     //Initial Zoom
@@ -102,17 +162,20 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             return polylineRenderer
     }
     
-    //Add annotations to Map View
+    //Add annotations to array
     
-    func addAnnotations()
+    func createAnnotations()
     {
         
         for i in 1...500
         {
-            let pin = Annotation(title: String(i), tag: i, coordinate: createLocation())
+            let pik = assign()
+            let pin = Annotation(title: pik.name, tag: i, coordinate: createLocation(), pikamon: pik)
             let location = CLLocationCoordinate2D.init(latitude: pin.coordinate.latitude, longitude: pin.coordinate.longitude)
             annotationLocations[i] = location
-            mapViewBoard.addAnnotation(pin)
+            
+            annotations.append(pin)
+            
         }
     }
     
@@ -166,6 +229,22 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             }
         }
 
+    }
+    
+    //Annotation Selected
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView)
+    {
+        let d = view.annotation?.coordinate
+        
+        for a in annotations
+        {
+            if a.coordinate.latitude == d?.latitude && a.coordinate.longitude == d?.longitude
+            {
+                selectedPikamon = a.AnPikamon
+                print(selectedPikamon.name)
+            }
+        }
     }
         
 }

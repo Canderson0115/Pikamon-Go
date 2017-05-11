@@ -17,6 +17,7 @@
 		D75BCEDD1EB91A8E0091695D /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BCEDC1EB91A8E0091695D /* Player.swift */; };
 		D76915751EB90F9200D0D950 /* PikamonMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76915741EB90F9200D0D950 /* PikamonMaker.swift */; };
 		D76915771EB913AC00D0D950 /* Pikapedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76915761EB913AC00D0D950 /* Pikapedia.swift */; };
+		EF073C4F1EBBB6C100C63C0C /* PikapediaDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073C4E1EBBB6C100C63C0C /* PikapediaDetailController.swift */; };
 		EFC0698A1EB3CDF0009D3C16 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC069891EB3CDF0009D3C16 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		D75BCEDC1EB91A8E0091695D /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		D76915741EB90F9200D0D950 /* PikamonMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PikamonMaker.swift; sourceTree = "<group>"; };
 		D76915761EB913AC00D0D950 /* Pikapedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pikapedia.swift; path = ../Pikapedia.swift; sourceTree = "<group>"; };
+		EF073C4E1EBBB6C100C63C0C /* PikapediaDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PikapediaDetailController.swift; sourceTree = "<group>"; };
 		EFC069891EB3CDF0009D3C16 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +71,7 @@
 				D72EB6511EB13112001D262E /* AppDelegate.swift */,
 				D72EB6531EB13112001D262E /* ViewController.swift */,
 				D76915761EB913AC00D0D950 /* Pikapedia.swift */,
+				EF073C4E1EBBB6C100C63C0C /* PikapediaDetailController.swift */,
 				D75BCEDC1EB91A8E0091695D /* Player.swift */,
 				D76915741EB90F9200D0D950 /* PikamonMaker.swift */,
 				EFC069891EB3CDF0009D3C16 /* MapViewController.swift */,
@@ -163,6 +166,7 @@
 				D72EB6541EB13112001D262E /* ViewController.swift in Sources */,
 				EFC0698A1EB3CDF0009D3C16 /* MapViewController.swift in Sources */,
 				D72EB6521EB13112001D262E /* AppDelegate.swift in Sources */,
+				EF073C4F1EBBB6C100C63C0C /* PikapediaDetailController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

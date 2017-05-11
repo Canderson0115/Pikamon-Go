@@ -16,11 +16,13 @@ class Annotation: NSObject, MKAnnotation {
     let title: String?
     let tag: Int
     let coordinate: CLLocationCoordinate2D
+    let AnPikamon: Parameters
     
-    init(title: String, tag: Int, coordinate: CLLocationCoordinate2D) {
+    init(title: String, tag: Int, coordinate: CLLocationCoordinate2D, pikamon: Parameters) {
         self.title = title
         self.tag = tag
         self.coordinate = coordinate
+        self.AnPikamon = pikamon
         
         super.init()
     }
@@ -32,6 +34,10 @@ class Annotation: NSObject, MKAnnotation {
     
     var getTag: Int {
         return tag
+    }
+    
+    var getPikamon: Parameters {
+        return AnPikamon
     }
 }
 
