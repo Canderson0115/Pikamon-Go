@@ -91,7 +91,10 @@ class ViewController: UIViewController {
                 let alert2 = UIAlertController(title: "What's your name?", message: "", preferredStyle: .alert)
                 
                 alert2.addTextField(configurationHandler: { (alertTextField) in
+                    
                     alertTextField.placeholder = "Name"
+                    
+                    alertTextField.autocapitalizationType = UITextAutocapitalizationType.sentences
                 })
                 
                 alert2.addAction(UIAlertAction(title: "OK", style: .default, handler: { (response) in
@@ -139,7 +142,6 @@ class ViewController: UIViewController {
             }))
             
             
-            //We need a new name for Squirtle
             alert3.addAction(UIAlertAction(title: "Purple", style: .default, handler: { (response) in
                 
                 self.player.pikamonInInventory.append(pikamon.purple)

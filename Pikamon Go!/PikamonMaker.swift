@@ -59,6 +59,8 @@ class PikamonClass
     var purple = Parameters(name: "Purple", type: [types.water], health: 28, alive: true, moveSet: [moves.punch, moves.waterSquirt], effects: [""], weight: 0.01, image: UIImage(named: "whiteness")!)
     
     
+    
+    
     var pikamonList = [Parameters]()
     
     init()
