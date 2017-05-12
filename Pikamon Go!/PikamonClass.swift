@@ -11,7 +11,7 @@ import UIKit
 class PikamonClass
 {
     
-    var LizieChu = Parameters(name: "LizieChu", type: [types.normal], health: 250, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2)
+    var LizieChu = Parameters(name: "LizieChu", type: [types.normal], health: 250, alive: true, moveSet: [moves.punch, moves.flowerBloom, moves.summonSpark, moves.cherryBlossom], effects: [""], weight: 0.2)
     
     var Glacierite = Parameters(name: "Glacierite", type: [types.normal], health: 250, alive: true, moveSet: [moves.punch], effects: ["ExampleEffect"], weight: 0.2)
     

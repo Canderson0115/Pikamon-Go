@@ -23,6 +23,7 @@
 		D75BCEDD1EB91A8E0091695D /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BCEDC1EB91A8E0091695D /* Player.swift */; };
 		D76915751EB90F9200D0D950 /* PikamonMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76915741EB90F9200D0D950 /* PikamonMaker.swift */; };
 		D76915771EB913AC00D0D950 /* Pikapedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76915761EB913AC00D0D950 /* Pikapedia.swift */; };
+		D7C996DC1EC3A42B001ADC2A /* PikamonEnemies.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C996DB1EC3A42B001ADC2A /* PikamonEnemies.swift */; };
 		EFC0698A1EB3CDF0009D3C16 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC069891EB3CDF0009D3C16 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		D75BCEDC1EB91A8E0091695D /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		D76915741EB90F9200D0D950 /* PikamonMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PikamonMaker.swift; sourceTree = "<group>"; };
 		D76915761EB913AC00D0D950 /* Pikapedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pikapedia.swift; path = ../Pikapedia.swift; sourceTree = "<group>"; };
+		D7C996DB1EC3A42B001ADC2A /* PikamonEnemies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PikamonEnemies.swift; sourceTree = "<group>"; };
 		EFC069891EB3CDF0009D3C16 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 				D76915741EB90F9200D0D950 /* PikamonMaker.swift */,
 				D73AA8C21EBBBB4C00D149E3 /* PikamonClass.swift */,
 				D74ADA8B1EC0FF1000FEB681 /* PikamonStruct.swift */,
+				D7C996DB1EC3A42B001ADC2A /* PikamonEnemies.swift */,
 				D73AA8C01EBBBB3000D149E3 /* MoveParameters.swift */,
 				D73AA8BA1EBBBA6C00D149E3 /* TypeParameters.swift */,
 				D73AA8BC1EBBBA8E00D149E3 /* MoveClass.swift */,
@@ -181,6 +184,7 @@
 				D75BCEDD1EB91A8E0091695D /* Player.swift in Sources */,
 				D73AA8BB1EBBBA6C00D149E3 /* TypeParameters.swift in Sources */,
 				D73AA8C11EBBBB3000D149E3 /* MoveParameters.swift in Sources */,
+				D7C996DC1EC3A42B001ADC2A /* PikamonEnemies.swift in Sources */,
 				D73AA8BF1EBBBADA00D149E3 /* TypesClass.swift in Sources */,
 				D73AA8BD1EBBBA8E00D149E3 /* MoveClass.swift in Sources */,
 				D73AA8C31EBBBB4C00D149E3 /* PikamonClass.swift in Sources */,

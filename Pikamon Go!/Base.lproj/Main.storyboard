@@ -140,7 +140,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZTE-EL-ATZ">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCell" id="Q23-X3-vjX">
@@ -226,6 +226,7 @@
                                         <rect key="frame" x="41" y="40" width="92" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -237,25 +238,37 @@
                                         <rect key="frame" x="41" y="95" width="92" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="skill3Tapped:" destination="UKp-gF-27R" eventType="touchUpInside" id="0Oq-aI-gYN"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JId-PX-ln0">
                                         <rect key="frame" x="241" y="95" width="92" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="skill4Tapped:" destination="UKp-gF-27R" eventType="touchUpInside" id="rNI-WP-T4G"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8n-An-69Q">
                                         <rect key="frame" x="241" y="40" width="92" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="skill2Tapped:" destination="UKp-gF-27R" eventType="touchUpInside" id="YQj-vU-8MX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.45605170726776123" green="0.9193192720413208" blue="0.72578853368759155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -330,6 +343,7 @@
                         <outlet property="enemyHealthLabel" destination="Z0C-Rg-zER" id="z9n-a8-M4V"/>
                         <outlet property="enemyImageView" destination="ehj-Ts-ipr" id="FDC-iO-5ez"/>
                         <outlet property="enemyNameLabel" destination="gth-Jt-E6C" id="4ny-qV-gwK"/>
+                        <outlet property="exitButton" destination="aPP-Gu-hWu" id="Eyb-E3-490"/>
                         <outlet property="gameConsole" destination="64P-Tx-O5X" id="3Qx-Hq-gs0"/>
                         <outlet property="skill1Button" destination="WR1-uK-LfS" id="URT-ZQ-FmA"/>
                         <outlet property="skill2Button" destination="m8n-An-69Q" id="7tN-yK-KQh"/>
@@ -364,6 +378,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FSf-Lz-t5G"/>
+        <segue reference="BLR-fs-Pyw"/>
     </inferredMetricsTieBreakers>
 </document>

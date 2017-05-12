@@ -15,13 +15,15 @@ class MoveParameters
     var powerPoints = [Int]()
     var damageMultiplier = Double()
     var type = String()
+    var restore = Int()
     
-    init(name: String, damage: Int, powerPoints: [Int], damageMultiplier: Double)
+    init(name: String, damage: Int, powerPoints: [Int], damageMultiplier: Double, restore: Int)
     {
         self.name = name
         self.damage = damage
         self.powerPoints = powerPoints
         self.damageMultiplier = damageMultiplier
+        self.restore = restore
     }
     
 }
