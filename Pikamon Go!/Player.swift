@@ -18,3 +18,8 @@ class Player
     var pikamonInInventory: [Parameters] = [pikamon.LizieChu]
     
 }
+
+class playerHealer
+{
+    var pikamonHealther: [Parameters] = [pikamonClass2.LizieChu]
+}

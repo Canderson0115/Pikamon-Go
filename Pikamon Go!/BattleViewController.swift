@@ -34,14 +34,19 @@ class BattleViewController: UIViewController {
     var currentEnemtClass3 = PikamonEnemies2()
     
     var player = Player()
+    var playerHeal = playerHealer()
     
     var enemyHealth = 0
+    
+    var timer = Timer()
+    var countTimer = 0
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.blue
         exitButton.isEnabled = false
+        exitButton.isHidden = true
         
         teamNameLabel.text = "\(player.pikamonInInventory[0].name)"
         teamHealthLabel.text = "\(player.pikamonInInventory[0].health)H / \(player.pikamonInInventory[0].health)H"
@@ -109,6 +114,7 @@ class BattleViewController: UIViewController {
     
     @IBAction func skill1Tapped(_ sender: UIButton)
     {
+        let pikamonHealth = playerHeal.pikamonHealther[0].health
         let blockChance = 1 + Int(arc4random_uniform(10))
         
         if blockChance <= 2
@@ -130,7 +136,7 @@ class BattleViewController: UIViewController {
                 enemyHealthLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].health)H / \(enemyHealth)H"
                 
                 player.pikamonInInventory[0].health += player.pikamonInInventory[0].moveSet[0].restore
-                teamHealthLabel.text = "\(player.pikamonInInventory[0].health)H / \(player.pikamonInInventory[0].health)H"
+                teamHealthLabel.text = "\(player.pikamonInInventory[0].health)H / \(pikamonHealth)H"
                 
                 gameConsole.text = "Enemy Pikamon takes \(player.pikamonInInventory[0].moveSet[0].damage) damage"
             }
@@ -150,11 +156,13 @@ class BattleViewController: UIViewController {
             }
         }
         
+        timerStart()
         winnerOrLoser()
     }
     
     @IBAction func skill2Tapped(_ sender: UIButton)
     {
+        let pikamonHealth = playerHeal.pikamonHealther[0].health
         let blockChance = 1 + Int(arc4random_uniform(10))
         
         if blockChance <= 2
@@ -176,7 +184,7 @@ class BattleViewController: UIViewController {
                 enemyHealthLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].health)H / \(enemyHealth)H"
                 
                 player.pikamonInInventory[0].health += player.pikamonInInventory[0].moveSet[1].restore
-                teamHealthLabel.text = "\(player.pikamonInInventory[0].health)H / \(player.pikamonInInventory[0].health)H"
+                teamHealthLabel.text = "\(player.pikamonInInventory[0].health)H / \(pikamonHealth)H"
                 
                 gameConsole.text = "Enemy Pikamon takes \(player.pikamonInInventory[0].moveSet[1].damage) damage"
             }
@@ -196,11 +204,13 @@ class BattleViewController: UIViewController {
             }
         }
         
+        timerStart()
         winnerOrLoser()
     }
     
     @IBAction func skill3Tapped(_ sender: UIButton)
     {
+        let pikamonHealth = playerHeal.pikamonHealther[0].health
         let blockChance = 1 + Int(arc4random_uniform(10))
         
         if blockChance <= 2
@@ -222,7 +232,7 @@ class BattleViewController: UIViewController {
                 enemyHealthLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].health)H / \(enemyHealth)H"
                 
                 player.pikamonInInventory[0].health += player.pikamonInInventory[0].moveSet[2].restore
-                teamHealthLabel.text = "\(player.pikamonInInventory[0].health)H / \(player.pikamonInInventory[0].health)H"
+                teamHealthLabel.text = "\(player.pikamonInInventory[0].health)H / \(pikamonHealth)H"
                 
                 gameConsole.text = "Enemy Pikamon takes \(player.pikamonInInventory[0].moveSet[2].damage) damage"
             }
@@ -242,11 +252,13 @@ class BattleViewController: UIViewController {
             }
         }
         
+        timerStart()
         winnerOrLoser()
     }
     
     @IBAction func skill4Tapped(_ sender: UIButton)
     {
+        let pikamonHealth = playerHeal.pikamonHealther[0].health
         let blockChance = 1 + Int(arc4random_uniform(10))
         
         if blockChance <= 2
@@ -268,7 +280,7 @@ class BattleViewController: UIViewController {
                 enemyHealthLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].health)H / \(enemyHealth)H"
                 
                 player.pikamonInInventory[0].health += player.pikamonInInventory[0].moveSet[3].restore
-                teamHealthLabel.text = "\(player.pikamonInInventory[0].health)H / \(player.pikamonInInventory[0].health)H"
+                teamHealthLabel.text = "\(player.pikamonInInventory[0].health)H / \(pikamonHealth)H"
                 
                 gameConsole.text = "Enemy Pikamon takes \(player.pikamonInInventory[0].moveSet[3].damage) damage"
             }
@@ -288,6 +300,7 @@ class BattleViewController: UIViewController {
             }
         }
         
+        timerStart()
         winnerOrLoser()
     }
     
@@ -305,19 +318,95 @@ class BattleViewController: UIViewController {
             skill3Button.isEnabled = false
             skill4Button.isEnabled = false
             exitButton.isEnabled = true
+            exitButton.isHidden = false
         }
         else if player.pikamonInInventory[0].health <= 0
         {
+            let pikamonHealth = playerHeal.pikamonHealther[0].health
             gameConsole.text = "\(player.pikamonInInventory[0].name) has fainted"
             
             player.pikamonInInventory[0].health = 0
-            teamHealthLabel.text = "\(player.pikamonInInventory[0].health)H / \(player.pikamonInInventory[0].health)H"
+            teamHealthLabel.text = "\(player.pikamonInInventory[0].health)H / \(pikamonHealth)H"
             
             skill1Button.isEnabled = false
             skill2Button.isEnabled = false
             skill3Button.isEnabled = false
             skill4Button.isEnabled = false
             exitButton.isEnabled = true
+            exitButton.isHidden = false
+        }
+    }
+    
+    func enemyAttack()
+    {
+        skill1Button.isEnabled = false
+        skill2Button.isEnabled = false
+        skill3Button.isEnabled = false
+        skill4Button.isEnabled = false
+        
+        if countTimer >= 4
+        {
+            let enemyRandomAttack = 1 + Int(arc4random_uniform(4))
+            
+            if enemyRandomAttack == 1
+            {
+                attacks()
+            }
+            else if enemyRandomAttack == 2
+            {
+                attacks()
+            }
+            else if enemyRandomAttack == 3
+            {
+                attacks()
+            }
+            else if enemyRandomAttack == 4
+            {
+                attacks()
+            }
+            
+            timer.invalidate()
+            countTimer = 0
+            
+            skill1Button.isEnabled = true
+            skill2Button.isEnabled = true
+            skill3Button.isEnabled = true
+            skill4Button.isEnabled = true
+            
+            winnerOrLoser()
+        }
+        else
+        {
+            countTimer += 1
+        }
+        
+    }
+    
+    func timerStart()
+    {
+        timer = Timer.scheduledTimer(timeInterval: 0.25, target: self, selector: #selector(enemyAttack), userInfo: nil, repeats: true)
+    }
+    
+    func attacks()
+    {
+        let pikamonHealth = playerHeal.pikamonHealther[0].health
+        
+        let blockChance = 1 + Int(arc4random_uniform(10))
+        
+        if blockChance <= 2
+        {
+            gameConsole.text = "Your Pikamon blocked incoming damage"
+        }
+        else
+        {
+            player.pikamonInInventory[0].health -= currentEnemy.pikamonEnemiesInInventory[0].moveSet[0].damage
+            teamHealthLabel.text = "\(player.pikamonInInventory[0].health)H / \(pikamonHealth)H"
+            
+            gameConsole.text = "Your Pikamon takes \(currentEnemy.pikamonEnemiesInInventory[0].moveSet[0].damage) damage"
+            
+            currentEnemy.pikamonEnemiesInInventory[0].health += currentEnemy.pikamonEnemiesInInventory[0].moveSet[0].restore
+            enemyHealthLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].health)H / \(enemyHealth)H"
+            
         }
     }
     
