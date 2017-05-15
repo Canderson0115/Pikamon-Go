@@ -22,7 +22,6 @@ class Parameters
     var image = UIImage()
     
     
-    
     init(name: String, type: [TypeParameters], health: Int, alive: Bool, moveSet: [MoveParameters], effects: [String], weight: Double, image: UIImage)
     {
         self.name = name
@@ -46,7 +45,7 @@ class PikamonClass
     
     var Glacierite = Parameters(name: "Glacierite", type: [types.normal], health: 250, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "whiteness")!)
     
-    var Bochtite = Parameters(name: "Bochtite", type: [types.normal], health: 250, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "whiteness")!)
+    var Bochtite = Parameters(name: "Bochtite", type: [types.normal], health: 250, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "bochtiteimage")!)
     
     var Trithyta = Parameters(name: "Trithyta", type: [types.normal], health: 500, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "whiteness")!)
     
