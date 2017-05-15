@@ -125,7 +125,7 @@ var types = TypesClass()
 class PikamonClass
 {
     
-    var LizieChu = Parameters(name: "Tatarat", type: [types.normal], health: 250, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "lizzichuImage")!)
+    var LizieChu = Parameters(name: "Tatarat", type: [types.normal], health: 250, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "lizziechuimage")!)
     
     var Glacierite = Parameters(name: "Glacierite", type: [types.normal], health: 250, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "whiteness")!)
     
