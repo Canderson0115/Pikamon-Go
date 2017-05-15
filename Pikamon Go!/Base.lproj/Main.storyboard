@@ -132,11 +132,12 @@
                     </view>
                     <connections>
                         <outlet property="mapViewBoard" destination="ND5-Rz-OiM" id="die-gq-DDr"/>
+                        <segue destination="UKp-gF-27R" kind="show" identifier="toBattle" id="k5j-i4-Bcv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ot-JK-nOh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1560.8" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1561" y="139"/>
         </scene>
         <!--Detail View-->
         <scene sceneID="xAr-az-ZcV">
@@ -397,7 +398,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nnN-pv-hrx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="859.52023988005999"/>
+            <point key="canvasLocation" x="1561" y="872"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="v8B-cG-5VB">
@@ -420,5 +421,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="qYV-v6-8QB"/>
+        <segue reference="k5j-i4-Bcv"/>
     </inferredMetricsTieBreakers>
 </document>

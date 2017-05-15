@@ -295,7 +295,7 @@
 				INFOPLIST_FILE = "Pikamon Go!/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.jhhs620011.Pikamon-Go-Oskar";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.jhhs620011.Pikamon-Go-hi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -309,7 +309,7 @@
 				INFOPLIST_FILE = "Pikamon Go!/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.jhhs620011.Pikamon-Go-Oskar";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.jhhs620011.Pikamon-Go-hi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

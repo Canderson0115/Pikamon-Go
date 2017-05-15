@@ -91,7 +91,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
 
         mapViewBoard.addAnnotations(currentAnnotations)
-        print("yay")
+        
     }
     
     //Assign pikamon based on weight
@@ -170,7 +170,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         for i in 1...500
         {
             let pik = assign()
-            let pin = Annotation(title: pik.name, tag: i, coordinate: createLocation(), pikamon: pik)
+            let pin = Annotation(title: pik.name, tag: i, coordinate: createLocation(), pikamon: pik, image: pik.image)
             let location = CLLocationCoordinate2D.init(latitude: pin.coordinate.latitude, longitude: pin.coordinate.longitude)
             annotationLocations[i] = location
             
@@ -235,6 +235,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView)
     {
+        
         let d = view.annotation?.coordinate
         
         for a in annotations
@@ -245,6 +246,45 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 print(selectedPikamon.name)
             }
         }
+        
+        let alert8 = UIAlertController(title: "Are you sure that you want to battle \(selectedPikamon.name)?", message: "", preferredStyle: .alert)
+        
+        alert8.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (alert) in
+            
+            self.performSegue(withIdentifier: "toBattle", sender: nil)
+            
+        }))
+        
+        alert8.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        
+        present(alert8, animated: true, completion: nil)
+        
+    }
+    
+    //Change pins to images
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        var pinImage = UIImage()
+        
+        if annotation.isEqual(mapView.userLocation)
+        {
+            return nil
+        }
+        
+        let pin = MKAnnotationView(annotation: annotation, reuseIdentifier: nil)
+        
+        for p in currentAnnotations
+        {
+            if p.title! == annotation.title!!
+            {
+                pinImage = p.image
+            }
+        }
+        
+        pin.image = pinImage
+        
+        return pin
+        
     }
         
 }

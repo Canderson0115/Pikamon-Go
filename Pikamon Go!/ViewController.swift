@@ -145,7 +145,7 @@ class ViewController: UIViewController {
                 
                 self.player.pikamonInInventory.append(pikamon.purple)
                 
-                self.imageView.image = UIImage(named: "whiteness")
+                self.imageView.image = UIImage(named: "purpleimage")
                 
                 self.textLabel.text = "Purple, the water type Pikamon. This is the one you want?"
                 
@@ -165,6 +165,8 @@ class ViewController: UIViewController {
             }))
             
             alert4.addAction(UIAlertAction(title: "No", style: .default, handler: { (action) in
+                
+                self.player.pikamonInInventory.removeAll()
                 
                 self.textLabel.text = "OK then, which one do you want?"
                 
