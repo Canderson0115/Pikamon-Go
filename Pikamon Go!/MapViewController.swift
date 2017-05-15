@@ -18,6 +18,35 @@ extension Dictionary where Value: Equatable {
     }
 }
 
+extension UIImage {
+    
+    func resizeImage(targetSize: CGSize) -> UIImage {
+        let size = self.size
+        
+        let widthRatio  = targetSize.width  / size.width
+        let heightRatio = targetSize.height / size.height
+        
+        // Figure out what our orientation is, and use that to form the rectangle
+        var newSize: CGSize
+        if(widthRatio > heightRatio) {
+            newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
+        } else {
+            newSize = CGSize(width: size.width * widthRatio,  height: size.height * widthRatio)
+        }
+        
+        // This is the rect that we've calculated out and this is what is actually used below
+        let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
+        
+        // Actually do the resizing to the rect using the ImageContext stuff
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+        self.draw(in: rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
+    }
+}
+
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
 {
@@ -44,7 +73,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         createAnnotations()
         sortAnnotations()
         createPolyline()
-        zoomIn()
+        //zoomIn()
         locationMenager.delegate = self
         locationMenager.requestWhenInUseAuthorization()
         mapViewBoard.showsUserLocation = true
@@ -77,6 +106,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     func updateAnnotations()
     {
         mapViewBoard.removeAnnotations(currentAnnotations)
+        currentAnnotations.removeAll()
+        
         
         let userLocation = CLLocation.init(latitude: mapViewBoard.userLocation.coordinate.latitude, longitude: mapViewBoard.userLocation.coordinate.longitude)
         
@@ -89,7 +120,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 currentAnnotations.append(a)
             }
         }
-
+        
         mapViewBoard.addAnnotations(currentAnnotations)
         
     }
@@ -129,8 +160,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     func zoomIn()
     {
-        let location = CLLocationCoordinate2D(latitude: 42.095498, longitude: -87.969344)
-        let span = MKCoordinateSpanMake(0.07, 0.07)
+        let location = CLLocationCoordinate2D(latitude: mapViewBoard.userLocation.coordinate.latitude, longitude: mapViewBoard.userLocation.coordinate.longitude)
+        let span = MKCoordinateSpanMake(0.01, 0.01)
         let region = MKCoordinateRegion(center: location, span: span)
         mapViewBoard.setRegion(region, animated: false)
 
@@ -278,10 +309,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             if p.title! == annotation.title!!
             {
                 pinImage = p.image
+                break
             }
         }
         
-        pin.image = pinImage
+        let newi = pinImage.resizeImage(targetSize: CGSize(width: 50, height: 50))
+        
+        pin.image = newi
         
         return pin
         
