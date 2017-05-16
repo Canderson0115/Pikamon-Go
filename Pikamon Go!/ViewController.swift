@@ -124,7 +124,7 @@ class ViewController: UIViewController {
                 
                 self.player.pikamonInInventory.append(pikamon.Firemander)
                 
-                self.imageView.image = UIImage(named: "firemanderimage")
+                self.imageView.image = UIImage(named: "firemanderImage")
                 
                 self.textLabel.text = "Firemander, the fire type Pikamon. This is the one you want?"
                 
@@ -134,7 +134,7 @@ class ViewController: UIViewController {
                 
                 self.player.pikamonInInventory.append(pikamon.Lonelysore)
                 
-                self.imageView.image = UIImage(named: "lonlisoreimage")
+                self.imageView.image = UIImage(named: "lonelysoreImage")
                 
                 self.textLabel.text = "Lonelysore, the grass type Pikamon. Seriously? This is the one you want?"
                 
@@ -145,7 +145,7 @@ class ViewController: UIViewController {
                 
                 self.player.pikamonInInventory.append(pikamon.purple)
                 
-                self.imageView.image = UIImage(named: "purpleimage")
+                self.imageView.image = UIImage(named: "purpleImage")
                 
                 self.textLabel.text = "Purple, the water type Pikamon. This is the one you want?"
                 
