@@ -61,7 +61,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     var timer = Timer()
     var locationMenager = CLLocationManager()
     var selectedPikamon = Parameters()
-    
+    var run = Int()
     //Game boundary coordinates: 42.108516, -88.001374 : 42.073481, -87.937314
     
     override func viewDidLoad() {
@@ -78,6 +78,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         locationMenager.requestWhenInUseAuthorization()
         mapViewBoard.showsUserLocation = true
         timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.updateAnnotations), userInfo: nil, repeats: true)
+        run = 0
         
     }
     
@@ -105,8 +106,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     func updateAnnotations()
     {
-        mapViewBoard.removeAnnotations(currentAnnotations)
-        currentAnnotations.removeAll()
+        var workingAnnotations = [Annotation]()
+        var annotationsToAdd = [Annotation]()
+        var annotationsToRemove = [Annotation]()
+        var annotationsToKeep = [Annotation]()
         
         
         let userLocation = CLLocation.init(latitude: mapViewBoard.userLocation.coordinate.latitude, longitude: mapViewBoard.userLocation.coordinate.longitude)
@@ -117,11 +120,43 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             
             if distance.isLess(than: 250)
             {
-                currentAnnotations.append(a)
+                workingAnnotations.append(a)
+            }
+        }
+        if run == 0
+        {
+            currentAnnotations = workingAnnotations
+            annotationsToAdd = workingAnnotations
+            run = 1
+        }
+        else
+        {
+        for a in workingAnnotations
+        {
+            if currentAnnotations.contains(a)
+            {
+                annotationsToKeep.append(a)
+            }
+        }
+        for i in currentAnnotations
+        {
+            if workingAnnotations.contains(i) == false
+            {
+                annotationsToRemove.append(i)
             }
         }
         
-        mapViewBoard.addAnnotations(currentAnnotations)
+        for a in workingAnnotations
+        {
+            if currentAnnotations.contains(a) == false && annotationsToRemove.contains(a) == false
+            {
+                annotationsToAdd.append(a)
+            }
+        }
+        }
+        mapViewBoard.addAnnotations(annotationsToAdd)
+        mapViewBoard.removeAnnotations(annotationsToRemove)
+        currentAnnotations = annotationsToKeep + annotationsToAdd
         
     }
     
@@ -267,6 +302,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView)
     {
         
+        if view.annotation?.coordinate.latitude != mapViewBoard.userLocation.coordinate.latitude && view.annotation?.coordinate.longitude != mapViewBoard.userLocation.coordinate.longitude
+        {
         let d = view.annotation?.coordinate
         
         for a in annotations
@@ -289,7 +326,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         alert8.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
         
         present(alert8, animated: true, completion: nil)
-        
+        }
     }
     
     //Change pins to images
@@ -299,16 +336,25 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         if annotation.isEqual(mapView.userLocation)
         {
-            return nil
+            let pin = MKAnnotationView(annotation: annotation, reuseIdentifier: nil)
+            
+            pin.image = UIImage(named: "playerImage")?.resizeImage(targetSize: CGSize(width: 60, height: 60))
+        
+            return pin
         }
         
         let pin = MKAnnotationView(annotation: annotation, reuseIdentifier: nil)
         
+        if currentAnnotations != []
+        {
         for p in currentAnnotations
         {
             if p.title! == annotation.title!!
             {
+                if p.image.size.width != 0
+                {
                 pinImage = p.image
+                }
                 break
             }
         }
@@ -316,6 +362,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         let newi = pinImage.resizeImage(targetSize: CGSize(width: 50, height: 50))
         
         pin.image = newi
+        }
         
         return pin
         
