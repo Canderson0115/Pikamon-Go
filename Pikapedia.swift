@@ -41,14 +41,17 @@ class Pikapedia: UIViewController, UITableViewDataSource, UITableViewDelegate
                     pikamonDetails.append("Type: " + String(s.classIdentifier))
                 }
                 
-                pikamonDetails.append("Health: " + String(i.weight))
                 
                 var temp = String()
                 
                 for p in i.moveSet
                 {
-                    temp.append(String(p.name))
+                    temp.append(String(p.name)  + ", ")
                 }
+                
+                temp.remove(at: temp.index(before: temp.endIndex))
+                temp.remove(at: temp.index(before: temp.endIndex))
+
                 
                 pikamonDetails.append(String("Moves: \(temp)"))
                 

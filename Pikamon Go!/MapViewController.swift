@@ -54,6 +54,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     @IBOutlet weak var mapViewBoard: MKMapView!
     
+    @IBOutlet var gestureRecognizer: UIPanGestureRecognizer!
     var annotations = [Annotation]()
     var currentAnnotations = [Annotation]()
     var annotationLocations = [Int:CLLocationCoordinate2D]()
@@ -101,6 +102,18 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         return location
     }
+    
+    //Focus map if user is not interacting
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
+    {
+        if gestureRecognizer.numberOfTouches == 0 && Int((manager.location?.speed)!) > 2
+        {
+            zoomIn()
+        }
+
+    }
+    
     
     //Update annotations on map
     

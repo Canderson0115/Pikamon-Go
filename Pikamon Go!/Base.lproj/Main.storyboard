@@ -103,6 +103,10 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ND5-Rz-OiM">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="oC3-wN-ijL" appends="YES" id="3OK-Y2-PFf"/>
+                                </connections>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RpK-V7-9iZ">
                                 <rect key="frame" x="147" y="617" width="80" height="30"/>
@@ -131,11 +135,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="gestureRecognizer" destination="oC3-wN-ijL" id="WVq-aV-Pxa"/>
                         <outlet property="mapViewBoard" destination="ND5-Rz-OiM" id="die-gq-DDr"/>
                         <segue destination="UKp-gF-27R" kind="show" identifier="toBattle" id="k5j-i4-Bcv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ot-JK-nOh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="oC3-wN-ijL"/>
             </objects>
             <point key="canvasLocation" x="1561" y="139"/>
         </scene>
