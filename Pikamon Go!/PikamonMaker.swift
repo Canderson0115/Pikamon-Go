@@ -135,19 +135,19 @@ struct PikamonClass
     
     var LizieChu = Parameters(name: "Tatarat", type: [types.normal], health: 250, alive: true, moveSet: [moves.punch, moves.flowerBloom, moves.summonSpark, moves.cherryBlossom], effects: [""], weight: 0.2, image: UIImage(named: "lizziechuimage")!)
     
-    var Glacierite = Parameters(name: "Glacierite", type: [types.normal], health: 250, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "glacieriteimage")!)
+    var Glacierite = Parameters(name: "Glacierite", type: [types.normal], health: 250, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "glacieriteImage")!)
     
-    var Bochtite = Parameters(name: "Bochtite", type: [types.normal], health: 250, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "bochtiteimage")!)
+    var Bochtite = Parameters(name: "Bochtite", type: [types.normal], health: 250, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "bochtiteImage")!)
     
     var Trithyta = Parameters(name: "Trithyta", type: [types.normal], health: 500, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "whiteness")!)
     
-    var Pokéchew = Parameters(name: "Pokéchew", type: [types.normal], health: 100, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "pokechewimage")!)
+    var Pokéchew = Parameters(name: "Pokéchew", type: [types.normal], health: 100, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "pokechewImage")!)
     
-    var Firemander = Parameters(name: "Firemander", type: [types.fire], health: 25, alive: true, moveSet: [moves.punch, moves.flameTosser], effects: [""], weight: 0.01, image: UIImage(named: "firemanderimage")!)
+    var Firemander = Parameters(name: "Firemander", type: [types.fire], health: 25, alive: true, moveSet: [moves.punch, moves.flameTosser], effects: [""], weight: 0.01, image: UIImage(named: "firemanderImage")!)
     
-    var Lonelysore = Parameters(name: "Lonelysore", type: [types.normal], health: 30, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.01, image: UIImage(named: "lonlisoreimage")!)
+    var Lonelysore = Parameters(name: "Lonelysore", type: [types.normal], health: 30, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.01, image: UIImage(named: "lonelysoreImage")!)
     
-    var purple = Parameters(name: "Purple", type: [types.water], health: 28, alive: true, moveSet: [moves.punch, moves.waterSquirt], effects: [""], weight: 0.01, image: UIImage(named: "purpleimage")!)
+    var purple = Parameters(name: "Purple", type: [types.water], health: 28, alive: true, moveSet: [moves.punch, moves.waterSquirt], effects: [""], weight: 0.01, image: UIImage(named: "purpleImage")!)
     
     var pikamonList = [Parameters]()
     
