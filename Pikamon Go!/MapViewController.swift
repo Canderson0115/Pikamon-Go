@@ -20,9 +20,10 @@ extension Dictionary where Value: Equatable {
 
 extension UIImage {
     
-    func resizeImage(targetSize: CGSize) -> UIImage {
+    func resizeImage(targetSize: CGSize) -> UIImage? {
         let size = self.size
-        
+        if size.height != 0
+        {
         let widthRatio  = targetSize.width  / size.width
         let heightRatio = targetSize.height / size.height
         
@@ -44,6 +45,8 @@ extension UIImage {
         UIGraphicsEndImageContext()
         
         return newImage!
+        }
+        else {return nil}
     }
 }
 
@@ -74,7 +77,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         createAnnotations()
         sortAnnotations()
         createPolyline()
-        //zoomIn()
+        zoomIn()
         locationMenager.delegate = self
         locationMenager.requestWhenInUseAuthorization()
         mapViewBoard.showsUserLocation = true
@@ -107,11 +110,19 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
-        if gestureRecognizer.numberOfTouches == 0 && Int((manager.location?.speed)!) > 2
+        if gestureRecognizer.numberOfTouches == 0 //&& Int((manager.location?.speed)!) > 2
         {
             zoomIn()
         }
 
+    }
+    
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation)
+    {
+        if gestureRecognizer.numberOfTouches == 0 //&& Int((manager.location?.speed)!) > 2
+        {
+            zoomIn()
+        }
     }
     
     
@@ -211,7 +222,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         let location = CLLocationCoordinate2D(latitude: mapViewBoard.userLocation.coordinate.latitude, longitude: mapViewBoard.userLocation.coordinate.longitude)
         let span = MKCoordinateSpanMake(0.01, 0.01)
         let region = MKCoordinateRegion(center: location, span: span)
-        mapViewBoard.setRegion(region, animated: false)
+        mapViewBoard.setRegion(region, animated: true)
 
     }
     
@@ -372,9 +383,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             }
         }
         
-        let newi = pinImage.resizeImage(targetSize: CGSize(width: 50, height: 50))
-        
+        if pin.image?.size.height != 0
+        {
+        if let newi = pinImage.resizeImage(targetSize: CGSize(width: 50, height: 50))
+        {
         pin.image = newi
+        }
+        }
         }
         
         return pin
