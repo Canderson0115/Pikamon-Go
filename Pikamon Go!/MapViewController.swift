@@ -51,7 +51,7 @@ extension UIImage {
 }
 
 
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIPopoverPresentationControllerDelegate
 {
     
     
@@ -84,6 +84,40 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.updateAnnotations), userInfo: nil, repeats: true)
         run = 0
         
+    }
+    
+    func showPopover(_ base: UIView)
+    {
+        if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Menu")
+        {
+        
+            let navController = UINavigationController(rootViewController: viewController)
+            
+            navController.modalPresentationStyle = .popover
+            
+            if let pctrl = navController.popoverPresentationController {
+                
+                pctrl.delegate = self
+                
+                pctrl.sourceView = base
+                
+                pctrl.sourceRect = base.bounds
+                
+                self.present(navController, animated: true, completion: nil)
+                
+            }
+        }
+    }
+    
+    
+    @IBAction func tapMenuButton(_ sender: UIButton) {
+        
+        showPopover(sender)
+        
+    }
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
     }
     
     
