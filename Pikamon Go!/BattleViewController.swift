@@ -44,7 +44,7 @@ class BattleViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool)
     {
-        let sheet = UIAlertController(title: " ", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        let sheet = UIAlertController(title: "", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
         sheet.popoverPresentationController?.sourceView = self.view
         sheet.popoverPresentationController?.sourceRect = CGRect(x: 0, y: self.view.frame.height, width: self.view.frame.width, height: 100)
         
