@@ -26,7 +26,7 @@ class DetailView: UIViewController, UITableViewDataSource, UITableViewDelegate
             if data == "Type: 1"
             {
                 let i = pikapediaDetailData[indexS]?.index(of: "Type: 1")
-                pikapediaDetailData[indexS]?[i!] = "Type: ExampleFire"
+                pikapediaDetailData[indexS]?[i!] = "Type: Fire"
             }
         }
     }
