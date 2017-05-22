@@ -253,7 +253,7 @@
         <!--Pikamon In Inventory-->
         <scene sceneID="3EL-Lb-zqX">
             <objects>
-                <viewController title="Pikamon In Inventory" id="gGl-25-TnH" sceneMemberID="viewController">
+                <viewController title="Pikamon In Inventory" id="gGl-25-TnH" customClass="InventoryViewController" customModule="Pikamon_Go_" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IE4-og-0cQ"/>
                         <viewControllerLayoutGuide type="bottom" id="Ccz-bl-yMq"/>
@@ -276,6 +276,9 @@
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="YeF-cb-MRu" id="lBo-NG-4Vj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Flg-aj-ffD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
