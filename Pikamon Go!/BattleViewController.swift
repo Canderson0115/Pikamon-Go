@@ -52,7 +52,7 @@ class BattleViewController: UIViewController {
             
         }
         
-        let cancelButton = UIAlertAction(title: "Cancel", style: .default) { action in (self.segueReturn())
+        let cancelButton = UIAlertAction(title: "Flee", style: .default) { action in (self.segueReturn())
             
         }
         
