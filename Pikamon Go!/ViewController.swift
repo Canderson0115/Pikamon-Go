@@ -134,7 +134,7 @@ class ViewController: UIViewController {
                 
                 self.player.pikamonInInventory.append(pikamon.Lonelysore)
                 
-                self.imageView.image = UIImage(named: "lonlisoreimage")
+                self.imageView.image = UIImage(named: "lonelysoreimage")
                 
                 self.textLabel.text = "Lonelysore, the grass type Pikamon. Seriously? This is the one you want?"
                 
