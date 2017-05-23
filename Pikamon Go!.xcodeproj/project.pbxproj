@@ -18,6 +18,7 @@
 		D75BCEDD1EB91A8E0091695D /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BCEDC1EB91A8E0091695D /* Player.swift */; };
 		D76915751EB90F9200D0D950 /* PikamonMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76915741EB90F9200D0D950 /* PikamonMaker.swift */; };
 		D76915771EB913AC00D0D950 /* Pikapedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76915761EB913AC00D0D950 /* Pikapedia.swift */; };
+		D7A6D8CF1ED4C59E0050EB6B /* pocket_monsters_2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7A6D8CE1ED4C59E0050EB6B /* pocket_monsters_2.ttf */; };
 		D7D3B6DC1ED36E3A0050A4A3 /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D3B6DB1ED36E3A0050A4A3 /* InventoryViewController.swift */; };
 		EF073C4F1EBBB6C100C63C0C /* PikapediaDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF073C4E1EBBB6C100C63C0C /* PikapediaDetailController.swift */; };
 		EF25274C1ECE2BD300CBA5C5 /* mapstogpx20170517_194233.gpx in Resources */ = {isa = PBXBuildFile; fileRef = EF25274B1ECE2BD300CBA5C5 /* mapstogpx20170517_194233.gpx */; };
@@ -38,6 +39,7 @@
 		D75BCEDC1EB91A8E0091695D /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		D76915741EB90F9200D0D950 /* PikamonMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PikamonMaker.swift; sourceTree = "<group>"; };
 		D76915761EB913AC00D0D950 /* Pikapedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pikapedia.swift; path = ../Pikapedia.swift; sourceTree = "<group>"; };
+		D7A6D8CE1ED4C59E0050EB6B /* pocket_monsters_2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pocket_monsters_2.ttf; sourceTree = "<group>"; };
 		D7D3B6DB1ED36E3A0050A4A3 /* InventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
 		EF073C4E1EBBB6C100C63C0C /* PikapediaDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PikapediaDetailController.swift; sourceTree = "<group>"; };
 		EF25274B1ECE2BD300CBA5C5 /* mapstogpx20170517_194233.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mapstogpx20170517_194233.gpx; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				D72EB6551EB13112001D262E /* Main.storyboard */,
 				D72EB65A1EB13112001D262E /* LaunchScreen.storyboard */,
 				D72EB65D1EB13112001D262E /* Info.plist */,
+				D7A6D8CE1ED4C59E0050EB6B /* pocket_monsters_2.ttf */,
 				EF25274B1ECE2BD300CBA5C5 /* mapstogpx20170517_194233.gpx */,
 			);
 			path = "Pikamon Go!";
@@ -154,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7A6D8CF1ED4C59E0050EB6B /* pocket_monsters_2.ttf in Resources */,
 				EF25274C1ECE2BD300CBA5C5 /* mapstogpx20170517_194233.gpx in Resources */,
 				D72EB65C1EB13112001D262E /* LaunchScreen.storyboard in Resources */,
 				D72EB6591EB13112001D262E /* Assets.xcassets in Resources */,

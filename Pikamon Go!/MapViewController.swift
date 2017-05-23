@@ -55,6 +55,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 {
     
     
+    
     @IBOutlet weak var mapViewBoard: MKMapView!
     
     @IBOutlet var gestureRecognizer: UIPanGestureRecognizer!

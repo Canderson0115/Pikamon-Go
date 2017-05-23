@@ -29,6 +29,7 @@ class DetailView: UIViewController, UITableViewDataSource, UITableViewDelegate
                 pikapediaDetailData[indexS]?[i!] = "Type: Fire"
             }
         }
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
