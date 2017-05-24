@@ -9,6 +9,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>pocket_monsters_2.ttf</string>
+		<string>Pokémon Black, White, Black 2 and White 2 Tex.ttf</string>
 	</array>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
