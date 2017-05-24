@@ -15,11 +15,11 @@ class Player
     
     var level = 1
     
-    var pikamonInInventory: [Parameters] = [pikamon.LizieChu]
+    var pikamonInInventory: [Parameters] = []
     
 }
 
 class playerHealer
 {
-    var pikamonHealther: [Parameters] = [pikamonClass2.LizieChu]
+    var pikamonHealther: [Parameters] = []
 }

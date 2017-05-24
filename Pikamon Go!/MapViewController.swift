@@ -434,7 +434,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "battleSegue" && playerHeal.pikamonHealther[0].health == player.pikamonInInventory[0].health
+        if segue.identifier == "battleSegue" /* && playerHeal.pikamonHealther[0].health == player.pikamonInInventory[0].health */
         {
             let pikamonTrasnfer = pikamonClass
             let pikamonEnemiesTransfer = pikamonEnemiesClass
@@ -442,7 +442,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             newVC.currentEnemtClass2 = pikamonEnemiesTransfer
             newVC.currentEnemy = pikamonTrasnfer
         }
-        else if segue.identifier == "battleSegue" && playerHeal.pikamonHealther[0].health != player.pikamonInInventory[0].health
+        else if segue.identifier == "battleSegue" /* && playerHeal.pikamonHealther[0].health != player.pikamonInInventory[0].health */
         {
             let sheet = UIAlertController(title: "Your pikamon needs to heal before battle.", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
             sheet.popoverPresentationController?.sourceView = self.view

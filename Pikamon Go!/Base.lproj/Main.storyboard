@@ -114,7 +114,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Battle"/>
                                 <connections>
-                                    <segue destination="dQw-CY-dEx" kind="presentation" id="lRe-2c-q8f"/>
+                                    <segue destination="dQw-CY-dEx" kind="presentation" identifier="battleSegue" id="lRe-2c-q8f"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYT-Vh-c8d">
@@ -745,7 +745,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ox2-SL-rdl" kind="presentation" id="Bd1-1G-r8U"/>
+                                    <segue destination="Ox2-SL-rdl" kind="presentation" identifier="returnMap" id="Bd1-1G-r8U"/>
                                 </connections>
                             </button>
                         </subviews>

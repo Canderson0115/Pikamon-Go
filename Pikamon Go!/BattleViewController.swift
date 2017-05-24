@@ -66,7 +66,7 @@ class BattleViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.blue
         
-        pikamonHealth = playerHeal.pikamonHealther[0].health
+ //       pikamonHealth = playerHeal.pikamonHealther[0].health
         
         exitButton.isEnabled = false
         exitButton.isHidden = true

@@ -244,30 +244,6 @@ struct pikamonEnemiesListReset
     var pikamonEnemiesInInventoryReseter: [Parameters] = [pikamonZEnemies.Pokéchew,pikamonZEnemies.Bochtite,pikamonZEnemies.Firemander,pikamonZEnemies.Glacierite,pikamonZEnemies.LizieChu,pikamonZEnemies.Lonelysore,pikamonZEnemies.Trithyta]
 }
 
-class WonderParameters
-{
-    var value1 = Int()
-    var value2 = Int()
-    var value3 = Int()
-    var value4 = Int()
-    var value5 = Int()
-    var value6 = Int()
-    
-    init()
-    {
-        
-    }
-    
-    init(value1: Int, value2: Int, value3: Int, value4: Int, value5: Int, value6: Int)
-    {
-        self.value1 = value1
-        self.value2 = value2
-        self.value3 = value3
-        self.value4 = value4
-        self.value5 = value5
-        self.value6 = value6
-        
-    }
-}
+
 
 
