@@ -10,6 +10,8 @@ import UIKit
 
 var player = Player()
 
+var playerHealth = playerHealer()
+
 class ViewController: UIViewController {
     
     
@@ -105,6 +107,8 @@ class ViewController: UIViewController {
                 
                 player.pikamonInInventory.append(pikamon.Firemander)
                 
+                playerHealth.pikamonHealther.append(pikamonClass2.Firemander)
+                
                 self.imageView.image = UIImage(named: "firemanderimage")
                 
                 self.textLabel.text = "Firemander, the fire type Pikamon. This is the one you want?"
@@ -114,6 +118,8 @@ class ViewController: UIViewController {
             alert3.addAction(UIAlertAction(title: "Lonelysore", style: .default, handler: { (response) in
                 
                 player.pikamonInInventory.append(pikamon.Lonelysore)
+                
+                playerHealth.pikamonHealther.append(pikamonClass2.Lonelysore)
                 
                 self.imageView.image = UIImage(named: "lonelysoreImage")
                 
@@ -125,6 +131,8 @@ class ViewController: UIViewController {
             alert3.addAction(UIAlertAction(title: "Purple", style: .default, handler: { (response) in
                 
                 player.pikamonInInventory.append(pikamon.purple)
+                
+                playerHealth.pikamonHealther.append(pikamonClass2.purple)
                 
                 self.imageView.image = UIImage(named: "purpleimage")
                 

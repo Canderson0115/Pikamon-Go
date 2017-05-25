@@ -54,7 +54,8 @@ extension UIImage {
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIPopoverPresentationControllerDelegate
 {
     
-    
+    var pikamonEnemiesClass = PikamonEnemies2()
+    var pikamonClass = pikamonEnemiesList()
     
     @IBOutlet weak var mapViewBoard: MKMapView!
     
@@ -430,5 +431,37 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         return pin
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        print(segue.identifier!)
+        print(playerHealth.pikamonHealther[0].health)
+        print(player.pikamonInInventory[0].health)
+        
+        if segue.identifier == "battleSegue" && playerHealth.pikamonHealther[0].health == player.pikamonInInventory[0].health
+        {
+            let pikamonTrasnfer = pikamonClass
+            let pikamonEnemiesTransfer = pikamonEnemiesClass
+            let newVC = segue.destination as! BattleViewController
+            newVC.currentEnemtClass2 = pikamonEnemiesTransfer
+            newVC.currentEnemy = pikamonTrasnfer
+        }
+        else if segue.identifier == "battleSegue" && playerHealth.pikamonHealther[0].health != player.pikamonInInventory[0].health
+        {
+            let sheet = UIAlertController(title: "Your pikamon needs to heal before battle.", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+            sheet.popoverPresentationController?.sourceView = self.view
+            sheet.popoverPresentationController?.sourceRect = CGRect(x: 0, y: self.view.frame.height, width: self.view.frame.width, height: 100)
+            
+            let cancelButton = UIAlertAction(title: "Continue", style: .default) { (action) -> Void in
+                
+            }
+            
+            sheet.addAction(cancelButton)
+            
+            self.present(sheet, animated: true, completion: nil)
+        }
+        
+    }
+    
         
 }
