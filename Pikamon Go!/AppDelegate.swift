@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let labelAppearance = UILabel.appearance()
+        labelAppearance.font = UIFont(name: "Pokémon Black, White, Black 2 and White 2 Tex", size: 25)
+        
+        let textFieldAppearance = UITextView.appearance()
+        textFieldAppearance.font = UIFont(name: "Pokémon Black, White, Black 2 and White 2 Tex", size: 25)
+        
         return true
     }
 

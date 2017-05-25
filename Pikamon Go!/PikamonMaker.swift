@@ -9,6 +9,17 @@
 import UIKit
 import Foundation
 
+
+extension UILabel {
+    
+    var substituteFontName: String {
+        get { return self.font.fontName }
+        set { self.font = UIFont(name: "Pokémon Black, White, Black 2 and White 2 Tex.ttf", size: self.font.pointSize) }
+    }
+    
+}
+
+
 //Parameters for Pikamon
 
 class Parameters
