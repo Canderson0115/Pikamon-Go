@@ -155,12 +155,13 @@
                     <connections>
                         <outlet property="gestureRecognizer" destination="oC3-wN-ijL" id="WVq-aV-Pxa"/>
                         <outlet property="mapViewBoard" destination="ND5-Rz-OiM" id="die-gq-DDr"/>
+                        <segue destination="s9g-7o-ptO" kind="show" identifier="toBattle" id="JvN-Fx-lkM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ot-JK-nOh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="oC3-wN-ijL"/>
             </objects>
-            <point key="canvasLocation" x="1560.8" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1602" y="124"/>
         </scene>
         <!--Detail View-->
         <scene sceneID="xAr-az-ZcV">
@@ -371,7 +372,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Qa-x0-hNn" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="x8q-km-l7a">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="x8q-km-l7a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

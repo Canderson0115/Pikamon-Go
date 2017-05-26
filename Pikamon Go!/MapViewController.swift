@@ -421,10 +421,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         if pin.image?.size.height != 0
         {
-        if let newi = pinImage.resizeImage(targetSize: CGSize(width: 50, height: 50))
-        {
-        pin.image = newi
-        }
+            if let newi = pinImage.resizeImage(targetSize: CGSize(width: 50, height: 50))
+            {
+                pin.image = newi
+            }
         }
         }
         
@@ -437,6 +437,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         print(segue.identifier!)
         print(playerHealth.pikamonHealther[0].health)
         print(player.pikamonInInventory[0].health)
+        
+        if segue.identifier == "toBattle"
+        {
+          
+            pikamonClass.pikamonEnemiesInInventory.insert(selectedPikamon, at: 0)
+            
+        }
         
         if segue.identifier == "battleSegue" && playerHealth.pikamonHealther[0].health == player.pikamonInInventory[0].health
         {
