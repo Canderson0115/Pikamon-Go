@@ -6,11 +6,6 @@
 	<string>en</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
-	<key>UIAppFonts</key>
-	<array>
-		<string>pocket_monsters_2.ttf</string>
-		<string>Pokémon Black, White, Black 2 and White 2 Tex.ttf</string>
-	</array>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -29,6 +24,11 @@
 	<string>Allow location services?</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Allow location services?</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>pocket_monsters_2.ttf</string>
+		<string>Pokémon Black, White, Black 2 and White 2 Tex.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -40,8 +40,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
