@@ -135,7 +135,7 @@
 				TargetAttributes = {
 					D72EB64D1EB13112001D262E = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = H9LLPG675P;
+						DevelopmentTeam = JML6FZTNJ8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -315,7 +315,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = H9LLPG675P;
+				DEVELOPMENT_TEAM = JML6FZTNJ8;
 				INFOPLIST_FILE = "Pikamon Go!/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -330,7 +330,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = H9LLPG675P;
+				DEVELOPMENT_TEAM = JML6FZTNJ8;
 				INFOPLIST_FILE = "Pikamon Go!/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
