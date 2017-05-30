@@ -61,7 +61,7 @@ class BattleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.blue
+        self.view.backgroundColor = UIColor.cyan
         
         pikamonHealth = playerHealth.pikamonHealther[0].health
         
@@ -70,64 +70,70 @@ class BattleViewController: UIViewController {
         
         teamNameLabel.text = "\(player.pikamonInInventory[0].name)"
         teamHealthLabel.text = "\(player.pikamonInInventory[0].health)H / \(player.pikamonInInventory[0].health)H"
+        teamImageView.image = player.pikamonInInventory[0].image
         
         skill1Button.setTitle("\(player.pikamonInInventory[0].moveSet[0].name)", for: .normal)
         skill2Button.setTitle("\(player.pikamonInInventory[0].moveSet[1].name)", for: .normal)
         //       skill3Button.setTitle("\(player.pikamonInInventory[0].moveSet[2].name)", for: .normal)
-        //        skill4Button.setTitle("\(player.pikamonInInventory[0].moveSet[3].name)", for: .normal)
+        //       skill4Button.setTitle("\(player.pikamonInInventory[0].moveSet[3].name)", for: .normal)
         
-        let randomPikamon = 1 + Int(arc4random_uniform(7))
+        if currentEnemy.selectedEnemy == false
+        {
+            let randomPikamon = 1 + Int(arc4random_uniform(7))
         
-        if randomPikamon == 1
-        {
-            enemyHealth = currentEnemy.pikamonEnemiesInInventory[0].health
-        }
-        else if randomPikamon == 2
-        {
-            let movedElement = currentEnemy.pikamonEnemiesInInventory.remove(at: 1)
-            currentEnemy.pikamonEnemiesInInventory.insert(movedElement, at: 0)
-            enemyHealth = currentEnemy.pikamonEnemiesInInventory[0].health
+            if randomPikamon == 1
+            {
+                enemyHealth = currentEnemy.pikamonEnemiesInInventory[0].health
+            }
+            else if randomPikamon == 2
+            {
+                let movedElement = currentEnemy.pikamonEnemiesInInventory.remove(at: 1)
+                currentEnemy.pikamonEnemiesInInventory.insert(movedElement, at: 0)
+                enemyHealth = currentEnemy.pikamonEnemiesInInventory[0].health
             
-        }
-        else if randomPikamon == 3
-        {
-            let movedElement = currentEnemy.pikamonEnemiesInInventory.remove(at: 2)
-            currentEnemy.pikamonEnemiesInInventory.insert(movedElement, at: 0)
-            enemyHealth = currentEnemy.pikamonEnemiesInInventory[0].health
+            }
+            else if randomPikamon == 3
+            {
+                let movedElement = currentEnemy.pikamonEnemiesInInventory.remove(at: 2)
+                currentEnemy.pikamonEnemiesInInventory.insert(movedElement, at: 0)
+                enemyHealth = currentEnemy.pikamonEnemiesInInventory[0].health
             
-        }
-        else if randomPikamon == 4
-        {
-            let movedElement = currentEnemy.pikamonEnemiesInInventory.remove(at: 3)
-            currentEnemy.pikamonEnemiesInInventory.insert(movedElement, at: 0)
-            enemyHealth = currentEnemy.pikamonEnemiesInInventory[0].health
+            }
+            else if randomPikamon == 4
+            {
+                let movedElement = currentEnemy.pikamonEnemiesInInventory.remove(at: 3)
+                currentEnemy.pikamonEnemiesInInventory.insert(movedElement, at: 0)
+                enemyHealth = currentEnemy.pikamonEnemiesInInventory[0].health
             
-        }
-        else if randomPikamon == 5
-        {
-            let movedElement = currentEnemy.pikamonEnemiesInInventory.remove(at: 4)
-            currentEnemy.pikamonEnemiesInInventory.insert(movedElement, at: 0)
-            enemyHealth = currentEnemy.pikamonEnemiesInInventory[0].health
+            }
+            else if randomPikamon == 5
+            {
+                let movedElement = currentEnemy.pikamonEnemiesInInventory.remove(at: 4)
+                currentEnemy.pikamonEnemiesInInventory.insert(movedElement, at: 0)
+                enemyHealth = currentEnemy.pikamonEnemiesInInventory[0].health
             
-        }
-        else if randomPikamon == 6
-        {
-            let movedElement = currentEnemy.pikamonEnemiesInInventory.remove(at: 5)
-            currentEnemy.pikamonEnemiesInInventory.insert(movedElement, at: 0)
-            enemyHealth = currentEnemy.pikamonEnemiesInInventory[0].health
+            }
+            else if randomPikamon == 6
+            {
+                let movedElement = currentEnemy.pikamonEnemiesInInventory.remove(at: 5)
+                currentEnemy.pikamonEnemiesInInventory.insert(movedElement, at: 0)
+                enemyHealth = currentEnemy.pikamonEnemiesInInventory[0].health
             
-        }
-        else if randomPikamon == 7
-        {
-            let movedElement = currentEnemy.pikamonEnemiesInInventory.remove(at: 6)
-            currentEnemy.pikamonEnemiesInInventory.insert(movedElement, at: 0)
-            enemyHealth = currentEnemy.pikamonEnemiesInInventory[0].health
+            }
+            else if randomPikamon == 7
+            {
+                let movedElement = currentEnemy.pikamonEnemiesInInventory.remove(at: 6)
+                currentEnemy.pikamonEnemiesInInventory.insert(movedElement, at: 0)
+                enemyHealth = currentEnemy.pikamonEnemiesInInventory[0].health
             
+            }
         }
+        
+        enemyHealth = currentEnemy.pikamonEnemiesInInventory[0].health
         
         enemyNameLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].name)"
         enemyHealthLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].health)H / \(enemyHealth)H"
-        //        enemyImageView.image = currentEnemy.pikamonEnemiesInInventory[0].image
+        enemyImageView.image = currentEnemy.pikamonEnemiesInInventory[0].image
         gameConsole.text = "[Matt] \(currentEnemy.pikamonEnemiesInInventory[0].name) I release you!"
         
     }

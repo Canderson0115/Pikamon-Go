@@ -36,8 +36,6 @@ class ViewController: UIViewController {
         
         tapToContinueLabel.isEnabled = false
         
-        imageView.image = UIImage(named: "professoracorn")
-        
     }
     
     
@@ -85,11 +83,7 @@ class ViewController: UIViewController {
                 
                 if nameAnswer == "John Cena"
                 {
-                    self.textLabel.text = "AND HIS NAME IS JOHN CENA!!!"
-                }
-                else if nameAnswer == "Harambe"
-                {
-                    self.textLabel.text = "RIP"
+                    self.textLabel.text = ""
                 }
                 else
                 {
@@ -127,7 +121,7 @@ class ViewController: UIViewController {
                 
                 playerHealth.pikamonHealther.append(pikamonClass2.Lonelysore)
                 
-                self.imageView.image = UIImage(named: "lonelysoreimage")
+                self.imageView.image = UIImage(named: "lonelysoreImage")
                 
                 self.textLabel.text = "Lonelysore, the grass type Pikamon. Seriously? This is the one you want?"
                 
@@ -169,9 +163,9 @@ class ViewController: UIViewController {
                 
                 player.pikamonInInventory.removeAll()
                 
-                self.imageView.image = UIImage(named: "professoracorn")
-                
                 self.textLabel.text = "OK then, which one do you want?"
+                
+                self.imageView.image = UIImage(named: "whiteness")
                 
                 self.numberOfTaps = 6
                 
@@ -181,8 +175,6 @@ class ViewController: UIViewController {
         }
         else if numberOfTaps == 9
         {
-            imageView.image = UIImage(named: "professoracorn")
-            
             textLabel.text = "Now, \(player.name), it's time to enter the world of Pikamon!"
             
             tapToContinueLabel.titleLabel?.text = "Tap here to continue."
