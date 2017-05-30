@@ -145,7 +145,7 @@ struct PikamonClass
     
     var Firemander = Parameters(name: "Firemander", type: [types.fire], health: 25, alive: true, moveSet: [moves.punch, moves.flameTosser], effects: [""], weight: 0.01, image: UIImage(named: "firemanderimage")!)
     
-    var Lonelysore = Parameters(name: "Lonelysore", type: [types.normal], health: 30, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.01, image: UIImage(named: "lonelysoreimage")!)
+    var Lonelysore = Parameters(name: "Lonelysore", type: [types.normal], health: 30, alive: true, moveSet: [moves.punch, moves.cherryBlossom], effects: [""], weight: 0.01, image: UIImage(named: "lonelysoreimage")!)
     
     var purple = Parameters(name: "Purple", type: [types.water], health: 28, alive: true, moveSet: [moves.punch, moves.waterSquirt], effects: [""], weight: 0.01, image: UIImage(named: "purpleimage")!)
     
@@ -172,7 +172,7 @@ struct PikamonClassPar2
     
     var Firemander = Parameters(name: "Firemander", type: [types.fire], health: 25, alive: true, moveSet: [moves.punch, moves.flameTosser], effects: [""], weight: 0.01, image: UIImage(named: "firemanderimage")!)
     
-    var Lonelysore = Parameters(name: "Lonelysore", type: [types.normal], health: 30, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.01, image: UIImage(named: "lonelysoreimage")!)
+    var Lonelysore = Parameters(name: "Lonelysore", type: [types.normal], health: 30, alive: true, moveSet: [moves.punch, moves.cherryBlossom], effects: [""], weight: 0.01, image: UIImage(named: "lonelysoreimage")!)
     
     var purple = Parameters(name: "Purple", type: [types.water], health: 28, alive: true, moveSet: [moves.punch, moves.waterSquirt], effects: [""], weight: 0.01, image: UIImage(named: "purpleimage")!)
     
@@ -196,7 +196,7 @@ struct PikamonEnemies2
     
     var Firemander = Parameters(name: "Firemander", type: [types.fire], health: 25, alive: true, moveSet: [moves.punch, moves.flameTosser], effects: [""], weight: 0.01, image: UIImage(named: "firemanderimage")!)
     
-    var Lonelysore = Parameters(name: "Lonelysore", type: [types.normal], health: 30, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.01, image: UIImage(named: "lonelysoreimage")!)
+    var Lonelysore = Parameters(name: "Lonelysore", type: [types.normal], health: 30, alive: true, moveSet: [moves.punch, moves.cherryBlossom], effects: [""], weight: 0.01, image: UIImage(named: "lonelysoreimage")!)
     
     var purple = Parameters(name: "Purple", type: [types.water], health: 28, alive: true, moveSet: [moves.punch, moves.waterSquirt], effects: [""], weight: 0.01, image: UIImage(named: "purpleimage")!)
     
@@ -219,7 +219,7 @@ struct PikamonEnemies17
     
     var Firemander = Parameters(name: "Firemander", type: [types.fire], health: 25, alive: true, moveSet: [moves.punch, moves.flameTosser], effects: [""], weight: 0.01, image: UIImage(named: "firemanderimage")!)
     
-    var Lonelysore = Parameters(name: "Lonelysore", type: [types.normal], health: 30, alive: true, moveSet: [moves.punch, moves.flowerBloom], effects: [""], weight: 0.01, image: UIImage(named: "lonelysoreimage")!)
+    var Lonelysore = Parameters(name: "Lonelysore", type: [types.normal], health: 30, alive: true, moveSet: [moves.punch, moves.cherryBlossom], effects: [""], weight: 0.01, image: UIImage(named: "lonelysoreimage")!)
     
     var purple = Parameters(name: "Purple", type: [types.water], health: 28, alive: true, moveSet: [moves.punch, moves.waterSquirt], effects: [""], weight: 0.01, image: UIImage(named: "purpleimage")!)
     
