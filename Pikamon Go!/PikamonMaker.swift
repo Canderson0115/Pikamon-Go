@@ -89,7 +89,7 @@ class MoveParameters
 class MoveClass
 {
     
-    let punch = MoveParameters(name: "punch", damage: 40, powerPoints: [20,20], damageMultiplier: 1.0, restore: 0)
+    let punch = MoveParameters(name: "Punch", damage: 40, powerPoints: [20,20], damageMultiplier: 1.0, restore: 0)
     
     let flameTosser = MoveParameters(name: "Flametosser", damage: 60, powerPoints: [5, 5], damageMultiplier: 1.0, restore: 0)
     
@@ -181,7 +181,7 @@ struct PikamonClassPar2
     
 }
 
-struct PikamonEnemies2
+class PikamonEnemies2
 {
     
     var LizieChu = Parameters(name: "Tatarat", type: [types.normal], health: 12, alive: true, moveSet: [moves.punch, moves.flowerBloom, moves.summonSpark, moves.cherryBlossom], effects: [""], weight: 0.2, image: UIImage(named: "tataratimage")!)
@@ -204,7 +204,7 @@ struct PikamonEnemies2
     
 }
 
-struct PikamonEnemies17
+class PikamonEnemies17
 {
     
     var LizieChu = Parameters(name: "Tatarat", type: [types.normal], health: 12, alive: true, moveSet: [moves.punch, moves.flowerBloom, moves.summonSpark, moves.cherryBlossom], effects: [""], weight: 0.2, image: UIImage(named: "tataratimage")!)
@@ -234,12 +234,14 @@ var pikamon = PikamonClass()
 var pikamonClass2 = PikamonClassPar2()
 
 
-struct pikamonEnemiesList
+class pikamonEnemiesList
 {
     var pikamonEnemiesInInventory: [Parameters] = [pikamonEnemies.Pokéchew,pikamonEnemies.Bochtite,pikamonEnemies.Firemander,pikamonEnemies.Glacierite,pikamonEnemies.LizieChu,pikamonEnemies.Lonelysore,pikamonEnemies.Trithyta]
+    
+    var selectedEnemy = false
 }
 
-struct pikamonEnemiesListReset
+class pikamonEnemiesListReset
 {
     var pikamonEnemiesInInventoryReseter: [Parameters] = [pikamonZEnemies.Pokéchew,pikamonZEnemies.Bochtite,pikamonZEnemies.Firemander,pikamonZEnemies.Glacierite,pikamonZEnemies.LizieChu,pikamonZEnemies.Lonelysore,pikamonZEnemies.Trithyta]
 }
