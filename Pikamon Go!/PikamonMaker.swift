@@ -89,7 +89,7 @@ class MoveParameters
 class MoveClass
 {
     
-    let punch = MoveParameters(name: "punch", damage: 40, powerPoints: [20,20], damageMultiplier: 1.0, restore: 0)
+    let punch = MoveParameters(name: "Punch", damage: 40, powerPoints: [20,20], damageMultiplier: 1.0, restore: 0)
     
     let flameTosser = MoveParameters(name: "Flametosser", damage: 60, powerPoints: [5, 5], damageMultiplier: 1.0, restore: 0)
     
