@@ -139,7 +139,7 @@ struct PikamonClass
     
     var Bochtite = Parameters(name: "Bochtite", type: [types.normal], health: 25, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "bochtiteimage")!)
     
-    var Trithyta = Parameters(name: "Trithyta", type: [types.normal], health: 50, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "whiteness")!)
+    var Trithyta = Parameters(name: "Trithyta", type: [types.normal], health: 50, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "trithytaimage")!)
     
     var Pokéchew = Parameters(name: "Pokéchew", type: [types.normal], health: 30, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "pokechewimage")!)
     
@@ -166,7 +166,7 @@ struct PikamonClassPar2
     
     var Bochtite = Parameters(name: "Bochtite", type: [types.normal], health: 25, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "bochtiteimage")!)
     
-    var Trithyta = Parameters(name: "Trithyta", type: [types.normal], health: 50, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "whiteness")!)
+    var Trithyta = Parameters(name: "Trithyta", type: [types.normal], health: 50, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "trithytaimage")!)
     
     var Pokéchew = Parameters(name: "Pokéchew", type: [types.normal], health: 30, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "pokechewimage")!)
     
@@ -190,7 +190,7 @@ struct PikamonEnemies2
     
     var Bochtite = Parameters(name: "Bochtite", type: [types.normal], health: 25, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "bochtiteimage")!)
     
-    var Trithyta = Parameters(name: "Trithyta", type: [types.normal], health: 50, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "whiteness")!)
+    var Trithyta = Parameters(name: "Trithyta", type: [types.normal], health: 50, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "trithytaimage")!)
     
     var Pokéchew = Parameters(name: "Pokéchew", type: [types.normal], health: 30, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "pokechewimage")!)
     
@@ -213,7 +213,7 @@ struct PikamonEnemies17
     
     var Bochtite = Parameters(name: "Bochtite", type: [types.normal], health: 25, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "bochtiteimage")!)
     
-    var Trithyta = Parameters(name: "Trithyta", type: [types.normal], health: 50, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "whiteness")!)
+    var Trithyta = Parameters(name: "Trithyta", type: [types.normal], health: 50, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "trithytaimage")!)
     
     var Pokéchew = Parameters(name: "Pokéchew", type: [types.normal], health: 30, alive: true, moveSet: [moves.punch], effects: [""], weight: 0.2, image: UIImage(named: "pokechewimage")!)
     
