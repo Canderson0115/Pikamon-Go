@@ -434,7 +434,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        print(segue.identifier!)
+        //print(segue.identifier!)
         print(playerHealth.pikamonHealther[0].health)
         print(player.pikamonInInventory[0].health)
         
