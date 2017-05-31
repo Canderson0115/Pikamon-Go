@@ -29,7 +29,7 @@ class Pikapedia: UIViewController, UITableViewDataSource, UITableViewDelegate
         
         func createPikapedia()
         {
-            
+            //MVEO
             
             for i in pikamon.pikamonList
             {

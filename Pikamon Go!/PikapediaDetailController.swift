@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+//EFWEWFW
 class DetailView: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
     var pikapediaDetailData = [String:[String]]()
