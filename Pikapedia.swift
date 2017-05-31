@@ -29,16 +29,20 @@ class Pikapedia: UIViewController, UITableViewDataSource, UITableViewDelegate
         
         func createPikapedia()
         {
-            
+            //MVEO
             
             for i in pikamon.pikamonList
             {
                 
+                pikamonDetails.append("Name: " + i.name)
+                
                 pikamonDetails.append("Health: " + String(i.health))
+                
                 
                 for s in i.type
                 {
                     pikamonDetails.append("Type: " + String(s.classIdentifier))
+                    
                 }
                 
                 
