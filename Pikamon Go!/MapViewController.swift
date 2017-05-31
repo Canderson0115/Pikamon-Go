@@ -24,27 +24,27 @@ extension UIImage {
         let size = self.size
         if size.height != 0
         {
-        let widthRatio  = targetSize.width  / size.width
-        let heightRatio = targetSize.height / size.height
-        
-        // Figure out what our orientation is, and use that to form the rectangle
-        var newSize: CGSize
-        if(widthRatio > heightRatio) {
-            newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
-        } else {
-            newSize = CGSize(width: size.width * widthRatio,  height: size.height * widthRatio)
-        }
-        
-        // This is the rect that we've calculated out and this is what is actually used below
-        let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
-        
-        // Actually do the resizing to the rect using the ImageContext stuff
-        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
-        self.draw(in: rect)
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        return newImage!
+            let widthRatio  = targetSize.width  / size.width
+            let heightRatio = targetSize.height / size.height
+            
+            // Figure out what our orientation is, and use that to form the rectangle
+            var newSize: CGSize
+            if(widthRatio > heightRatio) {
+                newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
+            } else {
+                newSize = CGSize(width: size.width * widthRatio,  height: size.height * widthRatio)
+            }
+            
+            // This is the rect that we've calculated out and this is what is actually used below
+            let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
+            
+            // Actually do the resizing to the rect using the ImageContext stuff
+            UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+            self.draw(in: rect)
+            let newImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            
+            return newImage!
         }
         else {return nil}
     }
@@ -92,7 +92,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     {
         if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Menu")
         {
-        
+            
             let navController = UINavigationController(rootViewController: viewController)
             
             navController.modalPresentationStyle = .popover
@@ -150,7 +150,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         {
             zoomIn()
         }
-
+        
     }
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation)
@@ -191,28 +191,28 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
         else
         {
-        for a in workingAnnotations
-        {
-            if currentAnnotations.contains(a)
+            for a in workingAnnotations
             {
-                annotationsToKeep.append(a)
+                if currentAnnotations.contains(a)
+                {
+                    annotationsToKeep.append(a)
+                }
             }
-        }
-        for i in currentAnnotations
-        {
-            if workingAnnotations.contains(i) == false
+            for i in currentAnnotations
             {
-                annotationsToRemove.append(i)
+                if workingAnnotations.contains(i) == false
+                {
+                    annotationsToRemove.append(i)
+                }
             }
-        }
-        
-        for a in workingAnnotations
-        {
-            if currentAnnotations.contains(a) == false && annotationsToRemove.contains(a) == false
+            
+            for a in workingAnnotations
             {
-                annotationsToAdd.append(a)
+                if currentAnnotations.contains(a) == false && annotationsToRemove.contains(a) == false
+                {
+                    annotationsToAdd.append(a)
+                }
             }
-        }
         }
         mapViewBoard.addAnnotations(annotationsToAdd)
         mapViewBoard.removeAnnotations(annotationsToRemove)
@@ -234,7 +234,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         func randomNumber(probabilities: [Double]) -> Int
         {
-    
+            
             let sum = probabilities.reduce(0, +)
             let rnd = sum * Double(arc4random_uniform(UInt32.max)) / Double(UInt32.max)
             var accum = 0.0
@@ -248,7 +248,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
         
         return(pikamon.pikamonList[randomNumber(probabilities: weight)])
-
+        
     }
     
     //Initial Zoom
@@ -259,7 +259,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         let span = MKCoordinateSpanMake(0.01, 0.01)
         let region = MKCoordinateRegion(center: location, span: span)
         mapViewBoard.setRegion(region, animated: true)
-
+        
     }
     
     //Add overlay on map in order to create game boundaries
@@ -275,17 +275,17 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         let geodesic = MKGeodesicPolyline(coordinates: points, count: 5)
         mapViewBoard.add(geodesic)
-    
+        
     }
     
     //Color in the boundary overlay
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-       
-            let polylineRenderer = MKPolylineRenderer(overlay: overlay)
-            polylineRenderer.strokeColor = UIColor.blue
-            polylineRenderer.lineWidth = 2
-            return polylineRenderer
+        
+        let polylineRenderer = MKPolylineRenderer(overlay: overlay)
+        polylineRenderer.strokeColor = UIColor.blue
+        polylineRenderer.lineWidth = 2
+        return polylineRenderer
     }
     
     //Add annotations to array
@@ -317,7 +317,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         //Get raw distance
         
         var annotationDistanceDictionary = [Int:Double]()
-
+        
         
         for (tag, annotationLocation) in annotationLocations
         {
@@ -354,7 +354,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 }
             }
         }
-
+        
     }
     
     //Annotation Selected
@@ -364,28 +364,28 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         if view.annotation?.coordinate.latitude != mapViewBoard.userLocation.coordinate.latitude && view.annotation?.coordinate.longitude != mapViewBoard.userLocation.coordinate.longitude
         {
-        let d = view.annotation?.coordinate
-        
-        for a in annotations
-        {
-            if a.coordinate.latitude == d?.latitude && a.coordinate.longitude == d?.longitude
+            let d = view.annotation?.coordinate
+            
+            for a in annotations
             {
-                selectedPikamon = a.AnPikamon
-                print(selectedPikamon.name)
+                if a.coordinate.latitude == d?.latitude && a.coordinate.longitude == d?.longitude
+                {
+                    selectedPikamon = a.AnPikamon
+                    print(selectedPikamon.name)
+                }
             }
-        }
-        
-        let alert8 = UIAlertController(title: "Are you sure that you want to battle \(selectedPikamon.name)?", message: "", preferredStyle: .alert)
-        
-        alert8.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (alert) in
             
-            self.performSegue(withIdentifier: "toBattle", sender: nil)
+            let alert8 = UIAlertController(title: "Are you sure that you want to battle \(selectedPikamon.name)?", message: "", preferredStyle: .alert)
             
-        }))
-        
-        alert8.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
-        
-        present(alert8, animated: true, completion: nil)
+            alert8.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (alert) in
+                
+                self.performSegue(withIdentifier: "toBattle", sender: nil)
+                
+            }))
+            
+            alert8.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+            
+            present(alert8, animated: true, completion: nil)
         }
     }
     
@@ -399,7 +399,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             let pin = MKAnnotationView(annotation: annotation, reuseIdentifier: nil)
             
             pin.image = UIImage(named: "playerImage")?.resizeImage(targetSize: CGSize(width: 60, height: 60))
-        
+            
             return pin
         }
         
@@ -407,25 +407,25 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         if currentAnnotations != []
         {
-        for p in currentAnnotations
-        {
-            if p.title! == annotation.title!!
+            for p in currentAnnotations
             {
-                if p.image.size.width != 0
+                if p.title! == annotation.title!!
                 {
-                pinImage = p.image
+                    if p.image.size.width != 0
+                    {
+                        pinImage = p.image
+                    }
+                    break
                 }
-                break
             }
-        }
-        
-        if pin.image?.size.height != 0
-        {
-            if let newi = pinImage.resizeImage(targetSize: CGSize(width: 50, height: 50))
+            
+            if pin.image?.size.height != 0
             {
-                pin.image = newi
+                if let newi = pinImage.resizeImage(targetSize: CGSize(width: 50, height: 50))
+                {
+                    pin.image = newi
+                }
             }
-        }
         }
         
         return pin
@@ -440,20 +440,33 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         if segue.identifier == "toBattle"
         {
-          
+            let sheet = UIAlertController(title: "Your pikamon needs to heal before battle.", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+            sheet.popoverPresentationController?.sourceView = self.view
+            sheet.popoverPresentationController?.sourceRect = CGRect(x: 0, y: self.view.frame.height, width: self.view.frame.width, height: 100)
+            
+            let cancelButton = UIAlertAction(title: "Continue", style: .default) { (action) -> Void in
+                
+            }
+            
+            sheet.addAction(cancelButton)
+            
+            self.present(sheet, animated: true, completion: nil)
+        }
+        
+        if segue.identifier == "toBattle"
+        {
+            let newVC = segue.destination as! BattleViewController
+            
             pikamonClass.pikamonEnemiesInInventory.insert(selectedPikamon, at: 0)
+            pikamonClass.selectedEnemy = true
+            
+            newVC.currentEnemy = pikamonClass
+            
+            print("\(pikamonClass.pikamonEnemiesInInventory[0].name)")
             
         }
         
-        if segue.identifier == "battleSegue" && playerHealth.pikamonHealther[0].health == player.pikamonInInventory[0].health
-        {
-            let pikamonTrasnfer = pikamonClass
-            let pikamonEnemiesTransfer = pikamonEnemiesClass
-            let newVC = segue.destination as! BattleViewController
-            newVC.currentEnemtClass2 = pikamonEnemiesTransfer
-            newVC.currentEnemy = pikamonTrasnfer
-        }
-        else if segue.identifier == "battleSegue" && playerHealth.pikamonHealther[0].health != player.pikamonInInventory[0].health
+        if segue.identifier == "battleSegue" && playerHealth.pikamonHealther[0].health != player.pikamonInInventory[0].health
         {
             let sheet = UIAlertController(title: "Your pikamon needs to heal before battle.", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
             sheet.popoverPresentationController?.sourceView = self.view
@@ -470,5 +483,5 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
     }
     
-        
+    
 }

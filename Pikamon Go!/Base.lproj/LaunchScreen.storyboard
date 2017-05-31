@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundopening" translatesAutoresizingMaskIntoConstraints="NO" id="2My-mt-Jvn">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundOpening" translatesAutoresizingMaskIntoConstraints="NO" id="2My-mt-Jvn">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pikamongologo" translatesAutoresizingMaskIntoConstraints="NO" id="4up-DE-ojt">
@@ -58,7 +58,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backgroundopening" width="960" height="1280"/>
+        <image name="backgroundOpening" width="960" height="1280"/>
         <image name="pikamongologo" width="371" height="85"/>
         <image name="versionnumber" width="237" height="63"/>
     </resources>
