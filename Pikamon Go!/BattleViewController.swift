@@ -343,6 +343,11 @@ class BattleViewController: UIViewController {
             exitButton.isHidden = false
             
             timer.invalidate()
+            
+            if currentEnemy.selectedEnemy == true
+            {
+                
+            }
         }
         else if player.pikamonInInventory[0].health <= 0
         {
