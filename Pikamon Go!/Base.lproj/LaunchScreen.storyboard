@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,14 +23,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundOpening" translatesAutoresizingMaskIntoConstraints="NO" id="2My-mt-Jvn">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundopening" translatesAutoresizingMaskIntoConstraints="NO" id="2My-mt-Jvn">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pikamongologo" translatesAutoresizingMaskIntoConstraints="NO" id="4up-DE-ojt">
                                 <rect key="frame" x="16" y="166" width="343" height="95"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="aEY-6a-6JC"/>
-                                    <constraint firstAttribute="height" constant="95" id="zih-zR-kS1"/>
+                                    <constraint firstAttribute="width" secondItem="4up-DE-ojt" secondAttribute="height" multiplier="343:95" id="nv1-uy-tKR"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="versionnumber" translatesAutoresizingMaskIntoConstraints="NO" id="kZe-us-yaI">
@@ -41,14 +42,15 @@
                         </subviews>
                         <color key="backgroundColor" red="0.09406311195" green="0.7362640654" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="4up-DE-ojt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="4Co-Q7-9kU"/>
-                            <constraint firstItem="4up-DE-ojt" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="146" id="9uQ-2J-PhZ"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="kZe-us-yaI" secondAttribute="bottom" constant="20" id="C8F-t7-QI3"/>
+                            <constraint firstItem="4up-DE-ojt" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="Eq5-LB-5Gk"/>
                             <constraint firstItem="2My-mt-Jvn" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="KT4-4H-FPt"/>
                             <constraint firstItem="kZe-us-yaI" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="MpT-JE-3og"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="2My-mt-Jvn" secondAttribute="bottom" id="jCf-43-7mf"/>
+                            <constraint firstItem="4up-DE-ojt" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="jok-md-geG"/>
                             <constraint firstAttribute="trailing" secondItem="2My-mt-Jvn" secondAttribute="trailing" id="mrn-GG-28n"/>
                             <constraint firstItem="2My-mt-Jvn" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="oEd-Tp-uma"/>
+                            <constraint firstItem="4up-DE-ojt" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="146" id="pLM-iK-s4L"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -58,7 +60,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backgroundOpening" width="960" height="1280"/>
+        <image name="backgroundopening" width="960" height="1280"/>
         <image name="pikamongologo" width="371" height="85"/>
         <image name="versionnumber" width="237" height="63"/>
     </resources>
