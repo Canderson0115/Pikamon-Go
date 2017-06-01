@@ -97,7 +97,6 @@
 				D72EB6581EB13112001D262E /* Assets.xcassets */,
 				D72EB6551EB13112001D262E /* Main.storyboard */,
 				D72EB65A1EB13112001D262E /* LaunchScreen.storyboard */,
-				D71955AE1ED610A7005035F9 /* LaunchScreenViewController.swift */,
 				D72EB65D1EB13112001D262E /* Info.plist */,
 				D7A6D8D01ED4C9FD0050EB6B /* Pokémon Black, White, Black 2 and White 2 Tex.ttf */,
 				D7A6D8CE1ED4C59E0050EB6B /* pocket_monsters_2.ttf */,
@@ -138,7 +137,7 @@
 				TargetAttributes = {
 					D72EB64D1EB13112001D262E = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = H9LLPG675P;
+						DevelopmentTeam = JML6FZTNJ8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -319,7 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = H9LLPG675P;
+				DEVELOPMENT_TEAM = JML6FZTNJ8;
 				INFOPLIST_FILE = "Pikamon Go!/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -334,7 +333,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = H9LLPG675P;
+				DEVELOPMENT_TEAM = JML6FZTNJ8;
 				INFOPLIST_FILE = "Pikamon Go!/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

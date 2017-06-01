@@ -36,6 +36,8 @@ class ViewController: UIViewController {
         
         tapToContinueLabel.isEnabled = false
         
+        imageView.image = UIImage(named: "professoracorn")
+        
     }
     
     
@@ -165,7 +167,7 @@ class ViewController: UIViewController {
                 
                 self.textLabel.text = "OK then, which one do you want?"
                 
-                self.imageView.image = UIImage(named: "whiteness")
+                self.imageView.image = UIImage(named: "professoracorn")
                 
                 self.numberOfTaps = 6
                 
@@ -175,6 +177,8 @@ class ViewController: UIViewController {
         }
         else if numberOfTaps == 9
         {
+            imageView.image = UIImage(named: "professoracorn")
+            
             textLabel.text = "Now, \(player.name), it's time to enter the world of Pikamon!"
             
             tapToContinueLabel.titleLabel?.text = "Tap here to continue."
