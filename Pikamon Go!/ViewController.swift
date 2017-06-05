@@ -123,7 +123,7 @@ class ViewController: UIViewController {
                 
                 playerHealth.pikamonHealther.append(pikamonClass2.Lonelysore)
                 
-                self.imageView.image = UIImage(named: "lonelysoreImage")
+                self.imageView.image = UIImage(named: "lonelysoreimage")
                 
                 self.textLabel.text = "Lonelysore, the grass type Pikamon. Seriously? This is the one you want?"
                 

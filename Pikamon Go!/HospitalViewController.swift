@@ -152,22 +152,22 @@ class HospitalViewController: UIViewController {
         {
             healCount -= 1
         }
-        else if player.pikamonInInventory[1].health == playerHealth.pikamonHealther[1].health && healCount > 0
-        {
-            healCount -= 1
-        }
-        else if player.pikamonInInventory[2].health == playerHealth.pikamonHealther[2].health && healCount > 0
-        {
-            healCount -= 1
-        }
-        else if player.pikamonInInventory[3].health == playerHealth.pikamonHealther[3].health && healCount > 0
-        {
-            healCount -= 1
-        }
-        else if player.pikamonInInventory[4].health == playerHealth.pikamonHealther[4].health && healCount > 0
-        {
-            healCount -= 1
-        }
+//        else if player.pikamonInInventory[1].health == playerHealth.pikamonHealther[1].health && healCount > 0
+//        {
+//            healCount -= 1
+//        }
+//        else if player.pikamonInInventory[2].health == playerHealth.pikamonHealther[2].health && healCount > 0
+//        {
+//            healCount -= 1
+//        }
+//        else if player.pikamonInInventory[3].health == playerHealth.pikamonHealther[3].health && healCount > 0
+//        {
+//            healCount -= 1
+//        }
+//        else if player.pikamonInInventory[4].health == playerHealth.pikamonHealther[4].health && healCount > 0
+//        {
+//            healCount -= 1
+//        }
         
         if healCount == 0
         {

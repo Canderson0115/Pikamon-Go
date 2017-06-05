@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		750C50D01EB5C9700057C90E /* AnnotationClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750C50CF1EB5C9700057C90E /* AnnotationClass.swift */; };
-		D71955AF1ED610A7005035F9 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71955AE1ED610A7005035F9 /* LaunchScreenViewController.swift */; };
 		D72EB6521EB13112001D262E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EB6511EB13112001D262E /* AppDelegate.swift */; };
 		D72EB6541EB13112001D262E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EB6531EB13112001D262E /* ViewController.swift */; };
 		D72EB6571EB13112001D262E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D72EB6551EB13112001D262E /* Main.storyboard */; };
@@ -30,7 +29,6 @@
 
 /* Begin PBXFileReference section */
 		750C50CF1EB5C9700057C90E /* AnnotationClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationClass.swift; sourceTree = "<group>"; };
-		D71955AE1ED610A7005035F9 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		D72EB64E1EB13112001D262E /* Pikamon Go!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pikamon Go!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72EB6511EB13112001D262E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D72EB6531EB13112001D262E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -192,7 +190,6 @@
 				EFC0698A1EB3CDF0009D3C16 /* MapViewController.swift in Sources */,
 				D72EB6521EB13112001D262E /* AppDelegate.swift in Sources */,
 				D7D3B6DC1ED36E3A0050A4A3 /* InventoryViewController.swift in Sources */,
-				D71955AF1ED610A7005035F9 /* LaunchScreenViewController.swift in Sources */,
 				EF073C4F1EBBB6C100C63C0C /* PikapediaDetailController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +321,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.jhhs620011.Pikamon-Go";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -339,6 +337,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.jhhs620011.Pikamon-Go";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
