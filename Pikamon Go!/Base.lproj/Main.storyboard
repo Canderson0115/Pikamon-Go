@@ -139,9 +139,12 @@
                                     <action selector="tapMenuButton:" destination="Ox2-SL-rdl" eventType="touchUpInside" id="Esn-IW-sL0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h48-LO-WGO">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h48-LO-WGO">
                                 <rect key="frame" x="299" y="72" width="53" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="53" id="PbD-zc-r3y"/>
+                                    <constraint firstAttribute="height" constant="30" id="adL-lD-GHq"/>
+                                </constraints>
                                 <state key="normal" title="PikaMD"/>
                                 <connections>
                                     <segue destination="LxE-BP-VBC" kind="presentation" id="zaU-Kx-5In"/>
@@ -150,7 +153,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="h48-LO-WGO" firstAttribute="top" secondItem="FOj-GM-iH7" secondAttribute="bottom" constant="52" id="Aw8-AX-1yK"/>
                             <constraint firstItem="RpK-V7-9iZ" firstAttribute="top" secondItem="3en-3R-2DF" secondAttribute="bottom" constant="8" id="Fri-az-NVK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="h48-LO-WGO" secondAttribute="trailing" constant="7" id="JuS-XI-ciP"/>
                             <constraint firstAttribute="trailing" secondItem="ND5-Rz-OiM" secondAttribute="trailing" id="Phg-Rk-9Be"/>
                             <constraint firstItem="ND5-Rz-OiM" firstAttribute="leading" secondItem="1d6-Et-gmD" secondAttribute="leading" id="Qe2-S8-8Tm"/>
                             <constraint firstItem="3en-3R-2DF" firstAttribute="centerX" secondItem="1d6-Et-gmD" secondAttribute="centerX" id="hkh-DD-fTd"/>
@@ -537,7 +542,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Qa-x0-hNn" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="x8q-km-l7a">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="x8q-km-l7a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -581,7 +586,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uoy-8b-Sft">
-                                <rect key="frame" x="0.0" y="20" width="106.5" height="34"/>
+                                <rect key="frame" x="0.0" y="20" width="105.5" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Uoy-8b-Sft" secondAttribute="height" multiplier="121:39" id="VHA-pw-HdL"/>
                                 </constraints>

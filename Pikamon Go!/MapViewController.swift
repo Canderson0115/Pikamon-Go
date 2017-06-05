@@ -438,7 +438,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         print(playerHealth.pikamonHealther[0].health)
         print(player.pikamonInInventory[0].health)
         
-        if segue.identifier == "toBattle"
+        if segue.identifier == "toBattle" && playerHealth.pikamonHealther[0].health != player.pikamonInInventory[0].health
         {
             let sheet = UIAlertController(title: "Your pikamon needs to heal before battle.", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
             sheet.popoverPresentationController?.sourceView = self.view

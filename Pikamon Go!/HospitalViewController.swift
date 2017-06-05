@@ -53,7 +53,7 @@ class HospitalViewController: UIViewController {
         
         healPikamonOne.text = "\(player.pikamonInInventory[0].name): \(player.pikamonInInventory[0].health)H/\(playerHealthOne)H"
         
-        addHealOne.isEnabled = true
+//        addHealOne.isEnabled = true
         backButton.isEnabled = false
         backButton.isHidden = true
         
