@@ -102,6 +102,13 @@ class Pikapedia: UIViewController, UITableViewDataSource, UITableViewDelegate
         performSegue(withIdentifier: "detailSegue", sender: self)
     }
     
+    @IBAction func doneBarButton(_ sender: UIBarButtonItem) {
+        
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         let destination = segue.destination as! DetailView
