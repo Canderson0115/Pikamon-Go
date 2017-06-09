@@ -345,10 +345,14 @@ class BattleViewController: UIViewController {
             timer.invalidate()
             
             let appendablePikamon = currentEnemy.pikamonEnemiesInInventory[0]
+            let appendableHealth = pikamonReseter.pikamonEnemiesInInventoryReseter[0]
             
             if currentEnemy.selectedEnemy == true
             {
-                player.pikamonInInventory.append(appendablePikamon)
+                player.pikamonAmount += 1
+                
+                playerHealth.pikamonHealther.insert(appendableHealth, at: 1)
+                player.pikamonInInventory.insert(appendablePikamon, at: 1)
             }
         }
         else if player.pikamonInInventory[0].health <= 0

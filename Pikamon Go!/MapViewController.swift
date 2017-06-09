@@ -56,6 +56,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     var pikamonEnemiesClass = PikamonEnemies2()
     var pikamonClass = pikamonEnemiesList()
+    var pikamonDohble = pikamonEnemiesListReset()
     
     @IBOutlet weak var mapViewBoard: MKMapView!
     
@@ -458,6 +459,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             let newVC = segue.destination as! BattleViewController
             
             pikamonClass.pikamonEnemiesInInventory.insert(selectedPikamon, at: 0)
+            pikamonDohble.pikamonEnemiesInInventoryReseter.insert(selectedPikamon, at: 0)
             pikamonClass.selectedEnemy = true
             
             newVC.currentEnemy = pikamonClass

@@ -63,9 +63,9 @@ class HospitalViewController: UIViewController {
     {
         healCount += 1
         
-        let playerHealthOne = playerHealth.pikamonHealther[1].health
+        let playerHealthTwo = playerHealth.pikamonHealther[1].health
         
-        healPikamonOne.text = "\(player.pikamonInInventory[1].name): \(player.pikamonInInventory[1].health)H/\(playerHealthOne)H"
+        healPikamonTwo.text = "\(player.pikamonInInventory[1].name): \(player.pikamonInInventory[1].health)H/\(playerHealthTwo)H"
         
         addHealTwo.isEnabled = true
         backButton.isEnabled = false
@@ -76,9 +76,9 @@ class HospitalViewController: UIViewController {
     {
         healCount += 1
         
-        let playerHealthOne = playerHealth.pikamonHealther[2].health
+        let playerHealthThree = playerHealth.pikamonHealther[2].health
         
-        healPikamonOne.text = "\(player.pikamonInInventory[2].name): \(player.pikamonInInventory[2].health)H/\(playerHealthOne)H"
+        healPikamonThree.text = "\(player.pikamonInInventory[2].name): \(player.pikamonInInventory[2].health)H/\(playerHealthThree)H"
         
         addHealThree.isEnabled = true
         backButton.isEnabled = false
@@ -89,9 +89,9 @@ class HospitalViewController: UIViewController {
     {
         healCount += 1
         
-        let playerHealthOne = playerHealth.pikamonHealther[3].health
+        let playerHealthFour = playerHealth.pikamonHealther[3].health
         
-        healPikamonOne.text = "\(player.pikamonInInventory[3].name): \(player.pikamonInInventory[3].health)H/\(playerHealthOne)H"
+        healPikamonFour.text = "\(player.pikamonInInventory[3].name): \(player.pikamonInInventory[3].health)H/\(playerHealthFour)H"
         
         addHealFour.isEnabled = true
         backButton.isEnabled = false
@@ -102,9 +102,9 @@ class HospitalViewController: UIViewController {
     {
         healCount += 1
         
-        let playerHealthOne = playerHealth.pikamonHealther[4].health
+        let playerHealthFive = playerHealth.pikamonHealther[4].health
         
-        healPikamonOne.text = "\(player.pikamonInInventory[4].name): \(player.pikamonInInventory[4].health)H/\(playerHealthOne)H"
+        healPikamonFive.text = "\(player.pikamonInInventory[4].name): \(player.pikamonInInventory[4].health)H/\(playerHealthFive)H"
         
         backButton.isEnabled = false
         backButton.isHidden = true
@@ -148,26 +148,54 @@ class HospitalViewController: UIViewController {
             healPikamonFive.text = "\(player.pikamonInInventory[4].name): \(player.pikamonInInventory[4].health)H/\(playerHealthFive)H"
         }
         
-        if player.pikamonInInventory[0].health == playerHealth.pikamonHealther[0].health && healCount > 0
+        if player.pikamonAmount >= 1
         {
-            healCount -= 1
+            if  player.pikamonInInventory[0].health == playerHealth.pikamonHealther[0].health && healCount > 0
+            {
+                healCount -= 1
+                
+            }
         }
-//        else if player.pikamonInInventory[1].health == playerHealth.pikamonHealther[1].health && healCount > 0
-//        {
-//            healCount -= 1
-//        }
-//        else if player.pikamonInInventory[2].health == playerHealth.pikamonHealther[2].health && healCount > 0
-//        {
-//            healCount -= 1
-//        }
-//        else if player.pikamonInInventory[3].health == playerHealth.pikamonHealther[3].health && healCount > 0
-//        {
-//            healCount -= 1
-//        }
-//        else if player.pikamonInInventory[4].health == playerHealth.pikamonHealther[4].health && healCount > 0
-//        {
-//            healCount -= 1
-//        }
+        
+        if player.pikamonAmount >= 2
+        {
+            addHealOne.isEnabled = true
+            
+            if  player.pikamonInInventory[1].health == playerHealth.pikamonHealther[1].health && healCount > 0
+            {
+                healCount -= 1
+            }
+        }
+        
+        if player.pikamonAmount >= 3
+        {
+            addHealTwo.isEnabled = true
+            
+            if  player.pikamonInInventory[2].health == playerHealth.pikamonHealther[2].health && healCount > 0
+            {
+                healCount -= 1
+            }
+        }
+        
+        if player.pikamonAmount >= 4
+        {
+            addHealThree.isEnabled = true
+            
+            if  player.pikamonInInventory[3].health == playerHealth.pikamonHealther[3].health && healCount > 0
+            {
+                healCount -= 1
+            }
+        }
+        
+        if player.pikamonAmount >= 5
+        {
+            addHealFour.isEnabled = true
+            
+            if  player.pikamonInInventory[4].health == playerHealth.pikamonHealther[4].health && healCount > 0
+            {
+                healCount -= 1
+            }
+        }
         
         if healCount == 0
         {

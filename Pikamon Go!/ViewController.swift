@@ -111,6 +111,8 @@ class ViewController: UIViewController {
                 
                 playerHealth.pikamonHealther.append(pikamonClass2.Firemander)
                 
+                player.pikamonAmount = 1
+                
                 self.imageView.image = UIImage(named: "firemanderimage")
                 
                 self.textLabel.text = "Firemander, the fire type Pikamon. This is the one you want?"
@@ -122,6 +124,8 @@ class ViewController: UIViewController {
                 player.pikamonInInventory.append(pikamon.Lonelysore)
                 
                 playerHealth.pikamonHealther.append(pikamonClass2.Lonelysore)
+                
+                player.pikamonAmount = 1
                 
                 self.imageView.image = UIImage(named: "lonelysoreimage")
                 
@@ -135,6 +139,8 @@ class ViewController: UIViewController {
                 player.pikamonInInventory.append(pikamon.purple)
                 
                 playerHealth.pikamonHealther.append(pikamonClass2.purple)
+                
+                player.pikamonAmount = 1
                 
                 self.imageView.image = UIImage(named: "purpleimage")
                 

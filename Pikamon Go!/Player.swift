@@ -17,6 +17,8 @@ class Player
     
     var pikamonInInventory: [Parameters] = []
     
+    var pikamonAmount = 0
+    
 }
 
 class playerHealer
