@@ -179,6 +179,34 @@ class BattleViewController: UIViewController {
                 
                 gameConsole.text = "Enemy Pikamon takes \(player.pikamonInInventory[0].moveSet[0].damage) damage"
             }
+            else if player.pikamonInInventory[0].moveSet[0].name == "Flametosser"
+            {
+                currentEnemy.pikamonEnemiesInInventory[0].health -= player.pikamonInInventory[0].moveSet[0].damage
+                enemyHealthLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].health)H / \(enemyHealth)H"
+                
+                gameConsole.text = "Enemy Pikamon takes \(player.pikamonInInventory[0].moveSet[0].damage) damage"
+            }
+            else if player.pikamonInInventory[0].moveSet[0].name == "Lightningbolt"
+            {
+                currentEnemy.pikamonEnemiesInInventory[0].health -= player.pikamonInInventory[0].moveSet[0].damage
+                enemyHealthLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].health)H / \(enemyHealth)H"
+                
+                gameConsole.text = "Enemy Pikamon takes \(player.pikamonInInventory[0].moveSet[0].damage) damage"
+            }
+            else if player.pikamonInInventory[0].moveSet[0].name == "Water Squirt"
+            {
+                currentEnemy.pikamonEnemiesInInventory[0].health -= player.pikamonInInventory[0].moveSet[0].damage
+                enemyHealthLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].health)H / \(enemyHealth)H"
+                
+                gameConsole.text = "Enemy Pikamon takes \(player.pikamonInInventory[0].moveSet[0].damage) damage"
+            }
+            else if player.pikamonInInventory[0].moveSet[0].name == "Soak Up"
+            {
+                currentEnemy.pikamonEnemiesInInventory[0].health -= player.pikamonInInventory[0].moveSet[0].damage
+                enemyHealthLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].health)H / \(enemyHealth)H"
+                
+                gameConsole.text = "Enemy Pikamon takes \(player.pikamonInInventory[0].moveSet[0].damage) damage"
+            }
         }
         
         timerStart()
@@ -220,6 +248,34 @@ class BattleViewController: UIViewController {
                 gameConsole.text = "Enemy Pikamon takes \(player.pikamonInInventory[0].moveSet[1].damage) damage"
             }
             else if player.pikamonInInventory[0].moveSet[1].name == "Cherry Blossom"
+            {
+                currentEnemy.pikamonEnemiesInInventory[0].health -= player.pikamonInInventory[0].moveSet[1].damage
+                enemyHealthLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].health)H / \(enemyHealth)H"
+                
+                gameConsole.text = "Enemy Pikamon takes \(player.pikamonInInventory[0].moveSet[1].damage) damage"
+            }
+            else if player.pikamonInInventory[0].moveSet[1].name == "Flametosser"
+            {
+                currentEnemy.pikamonEnemiesInInventory[0].health -= player.pikamonInInventory[0].moveSet[1].damage
+                enemyHealthLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].health)H / \(enemyHealth)H"
+                
+                gameConsole.text = "Enemy Pikamon takes \(player.pikamonInInventory[0].moveSet[1].damage) damage"
+            }
+            else if player.pikamonInInventory[0].moveSet[1].name == "Lightningbolt"
+            {
+                currentEnemy.pikamonEnemiesInInventory[0].health -= player.pikamonInInventory[0].moveSet[1].damage
+                enemyHealthLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].health)H / \(enemyHealth)H"
+                
+                gameConsole.text = "Enemy Pikamon takes \(player.pikamonInInventory[0].moveSet[1].damage) damage"
+            }
+            else if player.pikamonInInventory[0].moveSet[1].name == "Water Squirt"
+            {
+                currentEnemy.pikamonEnemiesInInventory[0].health -= player.pikamonInInventory[0].moveSet[1].damage
+                enemyHealthLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].health)H / \(enemyHealth)H"
+                
+                gameConsole.text = "Enemy Pikamon takes \(player.pikamonInInventory[0].moveSet[1].damage) damage"
+            }
+            else if player.pikamonInInventory[0].moveSet[1].name == "Soak Up"
             {
                 currentEnemy.pikamonEnemiesInInventory[0].health -= player.pikamonInInventory[0].moveSet[1].damage
                 enemyHealthLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].health)H / \(enemyHealth)H"
@@ -273,6 +329,34 @@ class BattleViewController: UIViewController {
                 
                 gameConsole.text = "Enemy Pikamon takes \(player.pikamonInInventory[0].moveSet[2].damage) damage"
             }
+            else if player.pikamonInInventory[0].moveSet[2].name == "Flametosser"
+            {
+                currentEnemy.pikamonEnemiesInInventory[0].health -= player.pikamonInInventory[0].moveSet[2].damage
+                enemyHealthLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].health)H / \(enemyHealth)H"
+                
+                gameConsole.text = "Enemy Pikamon takes \(player.pikamonInInventory[0].moveSet[2].damage) damage"
+            }
+            else if player.pikamonInInventory[0].moveSet[2].name == "Lightningbolt"
+            {
+                currentEnemy.pikamonEnemiesInInventory[0].health -= player.pikamonInInventory[0].moveSet[2].damage
+                enemyHealthLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].health)H / \(enemyHealth)H"
+                
+                gameConsole.text = "Enemy Pikamon takes \(player.pikamonInInventory[0].moveSet[2].damage) damage"
+            }
+            else if player.pikamonInInventory[0].moveSet[2].name == "Water Squirt"
+            {
+                currentEnemy.pikamonEnemiesInInventory[0].health -= player.pikamonInInventory[0].moveSet[2].damage
+                enemyHealthLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].health)H / \(enemyHealth)H"
+                
+                gameConsole.text = "Enemy Pikamon takes \(player.pikamonInInventory[0].moveSet[2].damage) damage"
+            }
+            else if player.pikamonInInventory[0].moveSet[2].name == "Soak Up"
+            {
+                currentEnemy.pikamonEnemiesInInventory[0].health -= player.pikamonInInventory[0].moveSet[2].damage
+                enemyHealthLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].health)H / \(enemyHealth)H"
+                
+                gameConsole.text = "Enemy Pikamon takes \(player.pikamonInInventory[0].moveSet[2].damage) damage"
+            }
         }
         
         timerStart()
@@ -314,6 +398,34 @@ class BattleViewController: UIViewController {
                 gameConsole.text = "Enemy Pikamon takes \(player.pikamonInInventory[0].moveSet[3].damage) damage"
             }
             else if player.pikamonInInventory[0].moveSet[3].name == "Cherry Blossom"
+            {
+                currentEnemy.pikamonEnemiesInInventory[0].health -= player.pikamonInInventory[0].moveSet[3].damage
+                enemyHealthLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].health)H / \(enemyHealth)H"
+                
+                gameConsole.text = "Enemy Pikamon takes \(player.pikamonInInventory[0].moveSet[3].damage) damage"
+            }
+            else if player.pikamonInInventory[0].moveSet[3].name == "Flametosser"
+            {
+                currentEnemy.pikamonEnemiesInInventory[0].health -= player.pikamonInInventory[0].moveSet[3].damage
+                enemyHealthLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].health)H / \(enemyHealth)H"
+                
+                gameConsole.text = "Enemy Pikamon takes \(player.pikamonInInventory[0].moveSet[3].damage) damage"
+            }
+            else if player.pikamonInInventory[0].moveSet[3].name == "Lightningbolt"
+            {
+                currentEnemy.pikamonEnemiesInInventory[0].health -= player.pikamonInInventory[0].moveSet[3].damage
+                enemyHealthLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].health)H / \(enemyHealth)H"
+                
+                gameConsole.text = "Enemy Pikamon takes \(player.pikamonInInventory[0].moveSet[3].damage) damage"
+            }
+            else if player.pikamonInInventory[0].moveSet[3].name == "Water Squirt"
+            {
+                currentEnemy.pikamonEnemiesInInventory[0].health -= player.pikamonInInventory[0].moveSet[3].damage
+                enemyHealthLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].health)H / \(enemyHealth)H"
+                
+                gameConsole.text = "Enemy Pikamon takes \(player.pikamonInInventory[0].moveSet[3].damage) damage"
+            }
+            else if player.pikamonInInventory[0].moveSet[3].name == "Soak Up"
             {
                 currentEnemy.pikamonEnemiesInInventory[0].health -= player.pikamonInInventory[0].moveSet[3].damage
                 enemyHealthLabel.text = "\(currentEnemy.pikamonEnemiesInInventory[0].health)H / \(enemyHealth)H"
